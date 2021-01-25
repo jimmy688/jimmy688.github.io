@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>oozie的介绍 | 个人博客 | JiiiiG</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="自是年少，韶华倾负">
+    
+    <link rel="preload" href="/assets/css/0.styles.420b7c1f.css" as="style"><link rel="preload" href="/assets/js/app.fdd7a502.js" as="script"><link rel="preload" href="/assets/js/16.375b747e.js" as="script"><link rel="preload" href="/assets/js/27.1518da7d.js" as="script"><link rel="prefetch" href="/assets/js/10.bbd38b9e.js"><link rel="prefetch" href="/assets/js/11.f49fc7d3.js"><link rel="prefetch" href="/assets/js/12.c5d97aa1.js"><link rel="prefetch" href="/assets/js/13.426d0224.js"><link rel="prefetch" href="/assets/js/14.1f257a58.js"><link rel="prefetch" href="/assets/js/15.be29bb6a.js"><link rel="prefetch" href="/assets/js/17.d02cdd8b.js"><link rel="prefetch" href="/assets/js/18.5d2371a4.js"><link rel="prefetch" href="/assets/js/19.038919a3.js"><link rel="prefetch" href="/assets/js/2.d6257727.js"><link rel="prefetch" href="/assets/js/20.b3582e09.js"><link rel="prefetch" href="/assets/js/21.0c1e826b.js"><link rel="prefetch" href="/assets/js/22.91bff1a5.js"><link rel="prefetch" href="/assets/js/23.faacea60.js"><link rel="prefetch" href="/assets/js/24.69816497.js"><link rel="prefetch" href="/assets/js/25.c9fcaa62.js"><link rel="prefetch" href="/assets/js/26.d28c3abe.js"><link rel="prefetch" href="/assets/js/28.748a5581.js"><link rel="prefetch" href="/assets/js/29.775019f1.js"><link rel="prefetch" href="/assets/js/3.141002a4.js"><link rel="prefetch" href="/assets/js/30.74e7c570.js"><link rel="prefetch" href="/assets/js/31.190b11f2.js"><link rel="prefetch" href="/assets/js/32.d8f4f116.js"><link rel="prefetch" href="/assets/js/33.c489bc81.js"><link rel="prefetch" href="/assets/js/34.db609d51.js"><link rel="prefetch" href="/assets/js/35.ad3402e6.js"><link rel="prefetch" href="/assets/js/36.45f11923.js"><link rel="prefetch" href="/assets/js/37.b47e0576.js"><link rel="prefetch" href="/assets/js/38.58b934a2.js"><link rel="prefetch" href="/assets/js/39.e4d6bcdf.js"><link rel="prefetch" href="/assets/js/4.e9b44388.js"><link rel="prefetch" href="/assets/js/40.555106bc.js"><link rel="prefetch" href="/assets/js/41.4387ceb1.js"><link rel="prefetch" href="/assets/js/42.9bd4aea0.js"><link rel="prefetch" href="/assets/js/43.587e7966.js"><link rel="prefetch" href="/assets/js/44.80285763.js"><link rel="prefetch" href="/assets/js/45.f978da77.js"><link rel="prefetch" href="/assets/js/46.d93e3f2e.js"><link rel="prefetch" href="/assets/js/47.c15bd2aa.js"><link rel="prefetch" href="/assets/js/48.cb55fa72.js"><link rel="prefetch" href="/assets/js/49.d0f4e454.js"><link rel="prefetch" href="/assets/js/5.b90b80cb.js"><link rel="prefetch" href="/assets/js/50.112e8260.js"><link rel="prefetch" href="/assets/js/51.a66bcd03.js"><link rel="prefetch" href="/assets/js/52.0c7cbfb1.js"><link rel="prefetch" href="/assets/js/53.67ef240b.js"><link rel="prefetch" href="/assets/js/54.2c2d082d.js"><link rel="prefetch" href="/assets/js/55.88f19a20.js"><link rel="prefetch" href="/assets/js/56.c726e920.js"><link rel="prefetch" href="/assets/js/57.eaee47c5.js"><link rel="prefetch" href="/assets/js/58.ac15a3ac.js"><link rel="prefetch" href="/assets/js/59.64bdc849.js"><link rel="prefetch" href="/assets/js/6.7eea74ff.js"><link rel="prefetch" href="/assets/js/7.a1370e98.js"><link rel="prefetch" href="/assets/js/8.2e898240.js"><link rel="prefetch" href="/assets/js/9.a2439994.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.420b7c1f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客 | JiiiiG</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/oozie/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/oozie/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="oozie的介绍"><a href="#oozie的介绍" class="header-anchor">#</a> oozie的介绍</h2> <p>Oozie是运行在hadoop平台上的一种工作流调度引擎，它可以用来调度与管理hadoop任务，如，MapReduce、Pig等。那么，对于OozieWorkflow中的一个个的action（可以理解成一个个MapReduce任务）Oozie是根据什么来对action的执行时间与执行顺序进行管理调度的呢？</p> <p>答案就是我们在数据结构中常见的有向无环图(DAGDirect Acyclic Graph)的模式来进行管理调度的，我们可以利用HPDL语言（一种xml语言）来定义整个workflow，实现工作流的调度oozie的架构以及执行流程。</p> <h2 id="oozie的架构"><a href="#oozie的架构" class="header-anchor">#</a> oozie的架构</h2> <p><img src="/assets/img/image-20200406153246246.46ac2e58.png" alt="image-20200406153246246"></p> <h2 id="oozie的执行流程"><a href="#oozie的执行流程" class="header-anchor">#</a> oozie的执行流程</h2> <p><img src="/assets/img/image-20200406153340005.54ddf539.png" alt="image-20200406153340005"></p> <h2 id="oozie的组件介绍"><a href="#oozie的组件介绍" class="header-anchor">#</a> oozie的组件介绍</h2> <ol><li>workFlow：工作流，定义工作流的任务的执行，主要由一个个的action组成，在xml中进行配置即可</li> <li>Coordinator ：协作器，说白了就是oozie当中的定时任务调度的模块</li> <li>Bundle ：很少用，是多个Coordinator的抽象，可以通过bundle将多个Coordinator进行组装集合起来，形成一个bundle。</li></ol> <h2 id="oozie的安装"><a href="#oozie的安装" class="header-anchor">#</a> oozie的安装</h2> <h4 id="下载安装包"><a href="#下载安装包" class="header-anchor">#</a> 下载安装包</h4> <p>oozie安装包的下载网址：</p> <p>http://archive.cloudera.com/cdh5/cdh/5/oozie-4.1.0-cdh5.14.2.tar.gz</p> <p>这里我们选择node03服务器作为安装服务器，下载安装包然后上传到node03服务器的/kkb/soft路径下去等待备用</p> <h4 id="第一步-修改core-site-xml"><a href="#第一步-修改core-site-xml" class="header-anchor">#</a> 第一步：修改core-site.xml</h4> <p>修改core-site.xml，添加我们hadoop集群的代理用户,之前安装hue的时候已经修改过了。</p> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/hadoop-2.6.2-cdh5.14.2/etc/hadoop
+
+vim core-site.xml
+</code></pre></div><p>添加以下内容：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>hadoop.proxyuser.hadoop.hosts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>hadoop.proxyuser.hadoop.groups<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>注意：hadoop的历史任务的服务必须启动，即19888端口可以查看</p> <p>重启hdfs与yarn集群以及启动jobhistory</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/hadoop-2.6.2-cdh5.14.2
+sbin/stop-dfs.sh
+sbin/start-dfs.sh
+sbin/stop-yarn.sh
+sbin/start-yarn.sh
+sbin/mr-jobhistory-daemon.sh start historyserver
+</code></pre></div><h4 id="第二步-上传oozie的安装包并解压"><a href="#第二步-上传oozie的安装包并解压" class="header-anchor">#</a> 第二步：上传oozie的安装包并解压</h4> <p>将我们的oozie的安装包上传到/kkb/soft</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/soft/
+<span class="token function">tar</span> -zxvf oozie-4.1.0-cdh5.14.2.tar.gz -C /kkb/install
+</code></pre></div><h4 id="第三步-解压hadooplibs到与oozie平行的目录"><a href="#第三步-解压hadooplibs到与oozie平行的目录" class="header-anchor">#</a> 第三步：解压hadooplibs到与oozie平行的目录</h4> <p>将oozie-hadooplibs-4.1.0-cdh5.14.2.tar.gz这个压缩包，解压到oozie的家目录的平行目录下</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -zxvf /kkb/install/oozie-4.1.0-cdh5.14.2/oozie-hadooplibs-4.1.0-cdh5.14.2.tar.gz -C /kkb/install/
+</code></pre></div><h4 id="第四步-创建libext目录"><a href="#第四步-创建libext目录" class="header-anchor">#</a> 第四步：创建libext目录</h4> <p>在oozie的安装路径下创建libext目录</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+<span class="token function">mkdir</span> -p libext
+</code></pre></div><h4 id="第五步-拷贝依赖包到libext"><a href="#第五步-拷贝依赖包到libext" class="header-anchor">#</a> 第五步：拷贝依赖包到libext</h4> <p>拷贝一些依赖包到libext目录下面去</p> <p>拷贝所有的依赖包</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+<span class="token function">cp</span> -ra hadooplibs/hadooplib-2.6.0-cdh5.14.2.oozie-4.1.0-cdh5.14.2/* libext/
+</code></pre></div><p>拷贝mysql的驱动包</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">cp</span> /kkb/install/hive-1.1.0-cdh5.14.2/lib/mysql-connector-java-5.1.38.jar /kkb/install/oozie-4.1.0-cdh5.14.2/libext/
+</code></pre></div><h4 id="第六步-添加ext-2-2-zip压缩包"><a href="#第六步-添加ext-2-2-zip压缩包" class="header-anchor">#</a> 第六步：添加ext-2.2.zip压缩包</h4> <p>拷贝ext-2.2.zip这个包到libext目录当中去</p> <p>将我们准备好的软件ext-2.2.zip拷贝到我们的libext目录当中去</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mv</span> /kkb/soft/ext-2.2.zip /kkb/install/oozie-4.1.0-cdh5.14.2/libext/
+</code></pre></div><h4 id="第七步-修改oozie-site-xml"><a href="#第七步-修改oozie-site-xml" class="header-anchor">#</a> 第七步：修改oozie-site.xml</h4> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2/conf
+
+vim oozie-site.xml
+</code></pre></div><p>如果没有这些属性，直接添加进去即可，oozie默认使用的是UTC的时区，我们需要在我们oozie-site.xml当中记得要配置我们的时区为GMT+0800时区</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.JPAService.jdbc.driver<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>com.mysql.jdbc.Driver<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.JPAService.jdbc.url<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>jdbc:mysql://node03:3306/oozie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.JPAService.jdbc.username<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>root<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.JPAService.jdbc.password<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>123456<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.processing.timezone<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>GMT+0800<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.ProxyUserService.proxyuser.hue.hosts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.ProxyUserService.proxyuser.hue.groups<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.coord.check.maximum.frequency<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.HadoopAccessorService.hadoop.configurations<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*=/kkb/install/hadoop-2.6.0-cdh5.14.2/etc/hadoop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="第八步-创建mysql数据库"><a href="#第八步-创建mysql数据库" class="header-anchor">#</a> 第八步：创建mysql数据库</h4> <div class="language-sql extra-class"><pre class="language-sql"><code>mysql <span class="token operator">-</span>uroot <span class="token operator">-</span>p
+
+<span class="token keyword">create</span> <span class="token keyword">database</span> oozie<span class="token punctuation">;</span>
+</code></pre></div><h4 id="第九步-上传oozie依赖的jar包到hdfs上面去"><a href="#第九步-上传oozie依赖的jar包到hdfs上面去" class="header-anchor">#</a> 第九步：上传oozie依赖的jar包到hdfs上面去</h4> <p>上传oozie解压后的目录的yarn.tar.gz到hdfs目录去</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/
+
+<span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ bin/oozie-setup.sh sharelib create -fs hdfs://node01:8020 -locallib oozie-sharelib-4.1.0-cdh5.14.2-yarn.tar.gz
+</code></pre></div><p>实际上就是将这些jar包解压到了hdfs的/user/hadoop/share/lib/lib_20200406174131路径下：</p> <p><img src="/assets/img/image-20200406174753029.0c9a1210.png" alt="image-20200406174753029"></p> <h4 id="第十步-创建oozie的数据库表"><a href="#第十步-创建oozie的数据库表" class="header-anchor">#</a> 第十步：创建oozie的数据库表</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+bin/oozie-setup.sh db create -run -sqlfile oozie.sql
+</code></pre></div><h4 id="第十一步-打包项目-生成war包"><a href="#第十一步-打包项目-生成war包" class="header-anchor">#</a> 第十一步：打包项目，生成war包</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sudo</span> yum -y <span class="token function">install</span> <span class="token function">zip</span>
+<span class="token function">sudo</span> yum -y <span class="token function">install</span> <span class="token function">unzip</span>
+
+<span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+bin/oozie-setup.sh prepare-war
+</code></pre></div><h4 id="第十二步-配置oozie的环境变量"><a href="#第十二步-配置oozie的环境变量" class="header-anchor">#</a> 第十二步：配置oozie的环境变量</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sudo</span> <span class="token function">vim</span> /etc/profile
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">OOZIE_HOME</span><span class="token operator">=</span>/kkb/install/oozie-4.1.0-cdh5.14.2
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">OOZIE_URL</span><span class="token operator">=</span>http://node03:11000/oozie
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>:<span class="token variable">$OOZIE_HOME</span>/bin
+
+<span class="token builtin class-name">source</span> /etc/profile
+</code></pre></div><h2 id="启动与关闭oozie服务"><a href="#启动与关闭oozie服务" class="header-anchor">#</a> 启动与关闭oozie服务</h2> <p>启动命令</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+bin/oozied.sh start 
+
+<span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ jps
+<span class="token number">27682</span> NodeManager
+<span class="token number">40547</span> HRegionServer
+<span class="token number">27574</span> DataNode
+<span class="token number">46824</span> Jps
+<span class="token number">40443</span> QuorumPeerMain
+<span class="token number">46287</span> Bootstrap  <span class="token comment">#出现Bootstrap表示启动了oozie</span>
+</code></pre></div><p>关闭命令</p> <div class="language-sh extra-class"><pre class="language-sh"><code>bin/oozied.sh stop
+</code></pre></div><h2 id="浏览器页面访问oozie"><a href="#浏览器页面访问oozie" class="header-anchor">#</a> 浏览器页面访问oozie</h2> <p>http://node03:11000/oozie/</p> <p>解决oozie的页面的时区问题：</p> <p><img src="/assets/img/image-20200406201642219.50626a97.png" alt="image-20200406201642219"></p> <p>我们页面访问的时候，发现我们的oozie使用的还是GMT的时区，与我们现在的时区相差一定的时间，所以我们需要调整一个js的获取时区的方法，将其改成我们现在的时区</p> <p>修改js当中的时区问题</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie-server/webapps/oozie
+<span class="token function">vim</span> oozie-console.js
+
+<span class="token comment">#搜索getTimeZone,将&quot;GMT&quot;改成&quot;GMT+0800&quot;</span>
+<span class="token keyword">function</span> <span class="token function-name function">getTimeZone</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Ext.state.Manager.setProvider<span class="token punctuation">(</span>new Ext.state.CookieProvider<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+  <span class="token builtin class-name">return</span> Ext.state.Manager.get<span class="token punctuation">(</span><span class="token string">&quot;TimezoneId&quot;</span>,<span class="token string">&quot;GMT+0800&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用oozie调度shell脚本"><a href="#使用oozie调度shell脚本" class="header-anchor">#</a> 使用oozie调度shell脚本</h2> <p>oozie安装好了之后，我们需要测试oozie的功能是否完整好使，官方已经给我们带了各种测试案例，我们可以通过官方提供的各种案例来对我们的oozie进行调度。</p> <h4 id="第一步-解压官方提供的调度案例"><a href="#第一步-解压官方提供的调度案例" class="header-anchor">#</a> 第一步：解压官方提供的调度案例</h4> <p>oozie自带了各种案例，我们可以使用oozie自带的各种案例来作为模板，所以我们这里先把官方提供的各种案例给解压出来</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+<span class="token function">tar</span> -zxf oozie-examples.tar.gz
+
+<span class="token comment">#解压后，会出现一个目录：/kkb/install/oozie-4.1.0-cdh5.14.2/examples</span>
+</code></pre></div><h4 id="第二步-创建我们的工作目录"><a href="#第二步-创建我们的工作目录" class="header-anchor">#</a> 第二步：创建我们的工作目录</h4> <p>在任意地方创建一个oozie的工作目录，以后我们的调度任务的配置文件全部放到oozie的工作目录当中去</p> <p>我这里直接在oozie的安装目录下面创建工作目录</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+<span class="token function">mkdir</span> oozie_works
+</code></pre></div><h4 id="第三步-拷贝我们的任务模板到我们的工作目录当中去"><a href="#第三步-拷贝我们的任务模板到我们的工作目录当中去" class="header-anchor">#</a> 第三步：拷贝我们的任务模板到我们的工作目录当中去</h4> <p>任务模板以及工作目录都准备好了之后，把我们的shell的任务模板拷贝到我们oozie的工作目录当中去</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+<span class="token function">cp</span> -r examples/apps/shell/ oozie_works/
+</code></pre></div><h4 id="第四步-随意准备一个shell脚本"><a href="#第四步-随意准备一个shell脚本" class="header-anchor">#</a> 第四步：随意准备一个shell脚本</h4> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2
+vim oozie_works/shell/hello.sh
+</code></pre></div><p>注意：这个脚本一定要是在我们oozie工作路径下的shell路径下的位置</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;hello world&quot;</span> <span class="token operator">&gt;&gt;</span> /kkb/install/hello_oozie.txt
+</code></pre></div><h4 id="第五步-修改模板下的配置文件"><a href="#第五步-修改模板下的配置文件" class="header-anchor">#</a> 第五步：修改模板下的配置文件</h4> <p>修改job.properties</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/shell
+<span class="token function">vim</span> job.properties
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token assign-left variable">nameNode</span><span class="token operator">=</span>hdfs://node01:8020
+<span class="token assign-left variable">jobTracker</span><span class="token operator">=</span>node01:8032
+<span class="token assign-left variable">queueName</span><span class="token operator">=</span>default
+<span class="token assign-left variable">examplesRoot</span><span class="token operator">=</span>oozie_works
+oozie.wf.application.path<span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/shell
+<span class="token assign-left variable">EXEC</span><span class="token operator">=</span>hello.sh 
+
+<span class="token comment">#jobTracker是hadoop1.x的主节点，现在已经不用了</span>
+<span class="token comment">#queueName表示任务提交的队列</span>
+<span class="token comment">#examplesRoot表示oozie任务的配置文件的根路径</span>
+<span class="token comment">#oozie.wf.application.path表示要将oozie任务上传到hdfs的哪个目录</span>
+<span class="token comment">#EXEC=hello.sh表示要执行的脚本</span>
+</code></pre></div><p>修改workflow.xml</p> <div class="language- extra-class"><pre class="language-text"><code>vim workflow.xml
+</code></pre></div><p>要注意的地方如下：</p> <div class="language- extra-class"><pre class="language-text"><code>1. &lt;exec&gt;${EXEC}&lt;/exec&gt;  #这里要改
+2. &lt;!-- &lt;argument&gt;my_output=Hello Oozie&lt;/argument&gt; --&gt; #这里要注释掉，因为将要执行的脚本不需要参数
+3. &lt;file&gt;/user/hadoop/oozie_works/shell/\${EXEC}#${EXEC}&lt;/file&gt;这个要自己添加，是脚本要上传到hdfs中的路径
+4. &lt;ok to=&quot;end&quot;/&gt;  #这里可改可不改，to=&quot;end&quot;,表示如果执行成功，直接跳到&lt;end&gt;步骤
+</code></pre></div><div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:workflow:0.4<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-wf<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>start</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>shell</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:shell-action:0.2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec</span><span class="token punctuation">&gt;</span></span>${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec</span><span class="token punctuation">&gt;</span></span>  #这里要改
+        <span class="token comment">&lt;!-- &lt;argument&gt;my_output=Hello Oozie&lt;/argument&gt; --&gt;</span> #这里要注释掉，因为脚本没参数
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>/user/hadoop/oozie_works/shell/${EXEC}#${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>capture-output</span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>shell</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>  #这里可改可不改
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>decision</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>check-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>switch</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>case</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            ${wf:actionData('shell-node')['my_output'] eq 'Hello Oozie'}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>case</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>default</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>switch</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>decision</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Shell action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Incorrect output, expected [Hello Oozie] but was [${wf:actionData('shell-node')['my_output']}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>end</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow-app</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="第六步-上传我们的调度任务到hdfs上面去"><a href="#第六步-上传我们的调度任务到hdfs上面去" class="header-anchor">#</a> 第六步：上传我们的调度任务到hdfs上面去</h4> <p>注意：上传的hdfs目录为/user/root，因为我们hadoop启动的时候使用的是root用户，如果hadoop启动的是其他用户，那么就上传到</p> <p>/user/其他用户</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+hdfs dfs -put oozie_works/ /user/hadoop
+</code></pre></div><h4 id="第七步-执行调度任务"><a href="#第七步-执行调度任务" class="header-anchor">#</a> 第七步：执行调度任务</h4> <p>通过oozie的命令来执行我们的调度任务</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+bin/oozie job -oozie http://node03:11000/oozie -config oozie_works/shell/job.properties -run
+</code></pre></div><p>从监控界面可以看到我们的任务正在执行了：</p> <img src="oozie.assets/image-20200406212303844.png" alt="image-20200406212303844"> <p>继续刷新，成功了：</p> <p><img src="/assets/img/image-20200406213106141.ea640565.png" alt="image-20200406213106141"></p> <p>通过19888端口，查看hadoop的JobHistory，会发现，oozie实际上是启动了一个MR任务去执行我们的shell脚本。</p> <p><img src="/assets/img/image-20200406214109395.628c0004.png" alt="image-20200406214109395"></p> <img src="oozie.assets/image-20200406214728641.png" alt="image-20200406214728641" style="zoom:80%;"> <h2 id="使用oozie调度hive"><a href="#使用oozie调度hive" class="header-anchor">#</a> 使用oozie调度hive</h2> <h4 id="第一步-拷贝hive的案例模板"><a href="#第一步-拷贝hive的案例模板" class="header-anchor">#</a> 第一步：拷贝hive的案例模板</h4> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2
+
+cp -ra examples/apps/hive2/ oozie_works/
+</code></pre></div><h4 id="第二步-编辑hive模板"><a href="#第二步-编辑hive模板" class="header-anchor">#</a> 第二步：编辑hive模板</h4> <p>这里使用的是hiveserver2来进行提交任务，需要注意我们要将hiveserver2的服务给启动起来</p> <p>修改job.properties</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/hive2
+
+<span class="token function">vim</span> job.properties
+
+<span class="token assign-left variable">nameNode</span><span class="token operator">=</span>hdfs://node01:8020
+<span class="token assign-left variable">jobTracker</span><span class="token operator">=</span>node01:8032
+<span class="token assign-left variable">queueName</span><span class="token operator">=</span>default
+<span class="token assign-left variable">jdbcURL</span><span class="token operator">=</span>jdbc:hive2://node03:10000/default
+<span class="token assign-left variable">examplesRoot</span><span class="token operator">=</span>oozie_works
+oozie.use.system.libpath<span class="token operator">=</span>true
+
+<span class="token comment">## 配置我们文件上传到hdfs的保存路径</span>
+oozie.wf.application.path<span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/hive2
+</code></pre></div><p>修改workflow.xml()</p> <div class="language- extra-class"><pre class="language-text"><code>vim workflow.xml
+</code></pre></div><div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:workflow:0.5<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hive2-wf<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>start</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hive2-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hive2-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hive2</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:hive2-action:0.1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prepare</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/user/${wf:user()}/${examplesRoot}/output-data/hive2<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mkdir</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/user/${wf:user()}/${examplesRoot}/output-data<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>prepare</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdbc-url</span><span class="token punctuation">&gt;</span></span>${jdbcURL}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jdbc-url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>script.q<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>INPUT=/user/${wf:user()}/${examplesRoot}/input-data/table<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>OUTPUT=/user/${wf:user()}/${examplesRoot}/output-data/hive2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>hive2</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Hive2 (Beeline) action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>end</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow-app</span><span class="token punctuation">&gt;</span></span> 
+</code></pre></div><p>编辑script.q文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/hive2
+<span class="token function">vim</span> script.q
+</code></pre></div><div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> test<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> EXTERNAL <span class="token keyword">TABLE</span> test <span class="token punctuation">(</span>a <span class="token keyword">INT</span><span class="token punctuation">)</span> STORED <span class="token keyword">AS</span> TEXTFILE LOCATION <span class="token string">'${INPUT}'</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> test <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> test <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> test <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="第三步-上传工作文件到hdfs"><a href="#第三步-上传工作文件到hdfs" class="header-anchor">#</a> 第三步：上传工作文件到hdfs</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+hdfs dfs -put hive2/ /user/hadoop/oozie_works/
+</code></pre></div><h4 id="第四步-执行oozie的调度"><a href="#第四步-执行oozie的调度" class="header-anchor">#</a> 第四步：执行oozie的调度</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>hadoop@node03 ~<span class="token punctuation">]</span>$ hive --service hiveserver2
+
+<span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+bin/oozie job -oozie http://node03:11000/oozie -config oozie_works/hive2/job.properties -run
+
+<span class="token comment">#-oozie http://node03:11000/oozie 表示oozie url</span>
+<span class="token comment">#-config oozie_works/hive2/job.properties 表示oozie配置文件的路径</span>
+<span class="token comment">#-run 表示 run a job</span>
+</code></pre></div><h4 id="第五步-查看调度结果"><a href="#第五步-查看调度结果" class="header-anchor">#</a> 第五步：查看调度结果</h4> <p><img src="/assets/img/image-20200408000032467.f772fbc8.png" alt="image-20200408000032467"></p> <p><img src="/assets/img/image-20200408000802963.caa6062e.png" alt="image-20200408000802963"></p> <h2 id="bin-oozie命令的使用帮助"><a href="#bin-oozie命令的使用帮助" class="header-anchor">#</a> bin/oozie命令的使用帮助</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ bin/oozie <span class="token builtin class-name">help</span>
+usage: 
+      the <span class="token function">env</span> variable <span class="token string">'OOZIE_URL'</span> is used as default value <span class="token keyword">for</span> the <span class="token string">'-oozie'</span> option
+      the <span class="token function">env</span> variable <span class="token string">'OOZIE_TIMEZONE'</span> is used as default value <span class="token keyword">for</span> the <span class="token string">'-timezone'</span> option
+      the <span class="token function">env</span> variable <span class="token string">'OOZIE_AUTH'</span> is used as default value <span class="token keyword">for</span> the <span class="token string">'-auth'</span> option
+      custom headers <span class="token keyword">for</span> Oozie web services can be specified using <span class="token string">'-Dheader:NAME=VALUE'</span>
+
+      oozie <span class="token builtin class-name">help</span> <span class="token builtin class-name">:</span> display usage <span class="token keyword">for</span> all commands or specified <span class="token builtin class-name">command</span>
+
+      oozie version <span class="token builtin class-name">:</span> show client version
+
+      oozie job <span class="token operator">&lt;</span>OPTIONS<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> job operations
+                -action <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          coordinator rerun/kill on action ids <span class="token punctuation">(</span>requires -rerun/-kill<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                       coordinator log retrieval on action ids<span class="token punctuation">(</span>requires -log<span class="token punctuation">)</span>
+                -allruns               Get workflow <span class="token function">jobs</span> corresponding to a coordinator action
+                                       including all the reruns
+                -auth <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            <span class="token keyword">select</span> authentication <span class="token builtin class-name">type</span> <span class="token punctuation">[</span>SIMPLE<span class="token operator">|</span>KERBEROS<span class="token punctuation">]</span>
+                -change <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          change a coordinator or bundle job
+                -config <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          job configuration <span class="token function">file</span> <span class="token string">'.xml'</span> or <span class="token string">'.properties'</span>
+                -configcontent <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>   job configuration
+                -coordinator <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>     bundle rerun on coordinator names <span class="token punctuation">(</span>requires -rerun<span class="token punctuation">)</span>
+                -D <span class="token operator">&lt;</span>property<span class="token operator">=</span>value<span class="token operator">&gt;</span>    set/override value <span class="token keyword">for</span> given property
+                -date <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            coordinator/bundle rerun on action dates <span class="token punctuation">(</span>requires -rerun<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                       coordinator log retrieval on action dates <span class="token punctuation">(</span>requires -log<span class="token punctuation">)</span>
+                -debug                 Use debug mode to see debugging statements on stdout
+                -definition <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>      job definition
+                -diff <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            Show <span class="token function">diff</span> of the new coord definition and properties with the
+                                       existing one <span class="token punctuation">(</span>default <span class="token boolean">true</span><span class="token punctuation">)</span>
+                -doas <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            doAs user, impersonates as the specified user
+                -dryrun                Dryrun a workflow <span class="token punctuation">(</span>since <span class="token number">3.3</span>.2<span class="token punctuation">)</span> or coordinator <span class="token punctuation">(</span>since <span class="token number">2.0</span><span class="token punctuation">)</span>
+                                       job without actually executing it
+                -failed                runs the failed workflow actions of the coordinator actions
+                                       <span class="token punctuation">(</span>requires -rerun<span class="token punctuation">)</span>
+                -filter <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          <span class="token operator">&lt;</span>key<span class="token operator">&gt;</span><span class="token operator">&lt;</span>comparator<span class="token operator">&gt;</span><span class="token operator">&lt;</span>value<span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">;</span><span class="token operator">&lt;</span>key<span class="token operator">&gt;</span><span class="token operator">&lt;</span>comparator<span class="token operator">&gt;</span><span class="token operator">&lt;</span>value<span class="token operator">&gt;</span><span class="token punctuation">]</span>*
+                                       <span class="token punctuation">(</span>All Coordinator actions satisfying the filters will be
+                                       retreived<span class="token punctuation">)</span>.
+                                       key: status or nominaltime
+                                       comparator: <span class="token operator">=</span>, <span class="token operator">!=</span>, <span class="token operator">&lt;</span>, <span class="token operator">&lt;</span><span class="token operator">=</span>, <span class="token operator">&gt;</span>, <span class="token operator">&gt;</span><span class="token operator">=</span>. <span class="token operator">=</span> is used as OR and others
+                                       as AND
+                                       status: values are valid status like SUCCEEDED, KILLED etc.
+                                       Only <span class="token operator">=</span> and <span class="token operator">!=</span> apply <span class="token keyword">for</span> status
+                                       nominaltime: <span class="token function">time</span> of <span class="token function">format</span> yyyy-MM-dd<span class="token string">'T'</span>HH:mm<span class="token string">'Z'</span>
+                -ignore <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          change status of a coordinator job or action to IGNORED
+                                       <span class="token punctuation">(</span>-action required to ignore coord actions<span class="token punctuation">)</span>
+                -info <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            info of a job
+                -interval <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>        polling interval <span class="token keyword">in</span> minutes <span class="token punctuation">(</span>default is <span class="token number">5</span>, requires -poll<span class="token punctuation">)</span>
+                -kill <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            <span class="token function">kill</span> a job <span class="token punctuation">(</span>coordinator can mention -action or -date<span class="token punctuation">)</span>
+                -len <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>             number of actions <span class="token punctuation">(</span>default TOTAL ACTIONS, requires -info<span class="token punctuation">)</span>
+                -localtime             use <span class="token builtin class-name">local</span> <span class="token function">time</span> <span class="token punctuation">(</span>same as passing your <span class="token function">time</span> zone to -timezone<span class="token punctuation">)</span>.
+                                       Overrides -timezone option
+                -log <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>             job log
+                -logfilter <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>       job log search parameter. Can be specified as -logfilter
+                                       <span class="token assign-left variable">opt1</span><span class="token operator">=</span>val1<span class="token punctuation">;</span><span class="token assign-left variable">opt2</span><span class="token operator">=</span>val1<span class="token punctuation">;</span><span class="token assign-left variable">opt3</span><span class="token operator">=</span>val1. Supported options are recent,
+                                       start, end, loglevel, text, limit and debug
+                -nocleanup             <span class="token keyword">do</span> not clean up output-events of the coordiantor rerun
+                                       actions <span class="token punctuation">(</span>requires -rerun<span class="token punctuation">)</span>
+                -offset <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          job info offset of actions <span class="token punctuation">(</span>default <span class="token string">'1'</span>, requires -info<span class="token punctuation">)</span>
+                -oozie <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           Oozie URL
+                -order <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           order to show coord actions <span class="token punctuation">(</span>default ascending order, <span class="token string">'desc'</span>
+                                       <span class="token keyword">for</span> descending order, requires -info<span class="token punctuation">)</span>
+                -poll <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>            poll Oozie <span class="token keyword">until</span> a job reaches a terminal state or a <span class="token function">timeout</span>
+                                       occurs
+                -refresh               re-materialize the coordinator rerun actions <span class="token punctuation">(</span>requires
+                                       -rerun<span class="token punctuation">)</span>
+                -rerun <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           rerun a job  <span class="token punctuation">(</span>coordinator requires -action or -date, bundle
+                                       requires -coordinator or -date<span class="token punctuation">)</span>
+                -resume <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          resume a job
+                -run                   run a job
+                -start <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           start a job
+                -submit                submit a job
+                -suspend <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>         <span class="token function">suspend</span> a job
+                -timeout <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>         <span class="token function">timeout</span> <span class="token keyword">in</span> minutes <span class="token punctuation">(</span>default is <span class="token number">30</span>, negative values indicate
+                                       no timeout, requires -poll<span class="token punctuation">)</span>
+                -timezone <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>        use <span class="token function">time</span> zone with the specified ID <span class="token punctuation">(</span>default GMT<span class="token punctuation">)</span>.
+                                       See <span class="token string">'oozie info -timezones'</span> <span class="token keyword">for</span> a list
+                -update <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          Update coord definition and properties
+                -value <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           new endtime/concurrency/pausetime value <span class="token keyword">for</span> changing a
+                                       coordinator job
+                -verbose               verbose mode
+
+      oozie <span class="token function">jobs</span> <span class="token operator">&lt;</span>OPTIONS<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> <span class="token function">jobs</span> status
+                 -auth <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>       <span class="token keyword">select</span> authentication <span class="token builtin class-name">type</span> <span class="token punctuation">[</span>SIMPLE<span class="token operator">|</span>KERBEROS<span class="token punctuation">]</span>
+                 -bulk <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>       key-value pairs to filter bulk <span class="token function">jobs</span> response. e.g.
+                                   <span class="token assign-left variable">bundle</span><span class="token operator">=</span><span class="token operator">&lt;</span>B<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">coordinators</span><span class="token operator">=</span><span class="token operator">&lt;</span>C<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">actionstatus</span><span class="token operator">=</span><span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">startcreatedtime</span><span class="token operator">=</span>
+                                   <span class="token operator">&lt;</span>SC<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">endcreatedtime</span><span class="token operator">=</span><span class="token operator">&lt;</span>EC<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">startscheduledtime</span><span class="token operator">=</span><span class="token operator">&lt;</span>SS<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span>endscheduledt
+                                   <span class="token assign-left variable">ime</span><span class="token operator">=</span><span class="token operator">&lt;</span>ES<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span> bundle, coordinators and actionstatus can be multiple
+                                   comma separated valuesbundle and coordinators can be id<span class="token punctuation">(</span>s<span class="token punctuation">)</span> or
+                                   appName<span class="token punctuation">(</span>s<span class="token punctuation">)</span> of those jobs. Specifying bundle is mandatory, other
+                                   params are optional
+                 -doas <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>       doAs user, impersonates as the specified user
+                 -filter <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>
+                                   <span class="token assign-left variable">text</span><span class="token operator">=</span><span class="token operator">&lt;</span>*<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">user</span><span class="token operator">=</span><span class="token operator">&lt;</span>U<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token operator">&lt;</span>N<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">group</span><span class="token operator">=</span><span class="token operator">&lt;</span>G<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">status</span><span class="token operator">=</span><span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">frequency</span><span class="token operator">=</span><span class="token operator">&lt;</span>F
+                                   <span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">unit</span><span class="token operator">=</span><span class="token operator">&lt;</span>M<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">startcreatedtime</span><span class="token operator">=</span><span class="token operator">&lt;</span>SC<span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">endcreatedtime</span><span class="token operator">=</span><span class="token operator">&lt;</span>EC<span class="token operator">&gt;</span>
+                                   <span class="token punctuation">\</span><span class="token punctuation">;</span><span class="token assign-left variable">sortBy</span><span class="token operator">=</span><span class="token operator">&lt;</span>SB<span class="token operator">&gt;</span>
+                                   <span class="token punctuation">(</span>text filter: matches partially with name and user or complete
+                                   match with job IDvalid unit values are <span class="token string">'months'</span>, <span class="token string">'days'</span>, <span class="token string">'hours'</span>
+                                   or <span class="token string">'minutes'</span><span class="token builtin class-name">.</span> startcreatedtime, endcreatedtime: <span class="token function">time</span> of <span class="token function">format</span>
+                                   yyyy-MM-dd<span class="token string">'T'</span>HH:mm<span class="token string">'Z'</span><span class="token builtin class-name">.</span> valid values <span class="token keyword">for</span> sortBy are <span class="token string">'createdTime'</span>
+                                   or <span class="token string">'lastModifiedTime'</span><span class="token builtin class-name">.</span><span class="token punctuation">)</span>
+                 -jobtype <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>    job <span class="token builtin class-name">type</span> <span class="token punctuation">(</span><span class="token string">'Supported in Oozie-2.0 or later versions ONLY -
+                                   '</span>coordinator<span class="token string">' or '</span>bundle<span class="token string">' or '</span>wf<span class="token string">'(default))
+                 -kill             bulk kill operation
+                 -len &lt;arg&gt;        number of jobs (default '</span><span class="token number">100</span><span class="token string">')
+                 -localtime        use local time (same as passing your time zone to -timezone).
+                                   Overrides -timezone option
+                 -offset &lt;arg&gt;     jobs offset (default '</span><span class="token number">1</span><span class="token string">')
+                 -oozie &lt;arg&gt;      Oozie URL
+                 -resume           bulk resume operation
+                 -suspend          bulk suspend operation
+                 -timezone &lt;arg&gt;   use time zone with the specified ID (default GMT).
+                                   See '</span>oozie info -timezones<span class="token string">' for a list
+                 -verbose          verbose mode
+
+      oozie admin &lt;OPTIONS&gt; : admin operations
+                  -auth &lt;arg&gt;         select authentication type [SIMPLE|KERBEROS]
+                  -configuration      show Oozie system configuration
+                  -doas &lt;arg&gt;         doAs user, impersonates as the specified user
+                  -instrumentation    show Oozie system instrumentation
+                  -javasysprops       show Oozie Java system properties
+                  -metrics            show Oozie system metrics
+                  -oozie &lt;arg&gt;        Oozie URL
+                  -osenv              show Oozie system OS environment
+                  -queuedump          show Oozie server queue elements
+                  -servers            list available Oozie servers (more than one only if HA is
+                                      enabled)
+                  -shareliblist       List available sharelib that can be specified in a workflow
+                                      action
+                  -sharelibupdate     Update server to use a newer version of sharelib
+                  -status             show the current system status
+                  -systemmode &lt;arg&gt;   Supported in Oozie-2.0 or later versions ONLY. Change oozie
+                                      system mode [NORMAL|NOWEBSERVICE|SAFEMODE]
+                  -version            show Oozie server build version
+
+      oozie validate &lt;OPTIONS&gt; &lt;ARGS&gt; : validate a workflow, coordinator, bundle XML file
+                     -auth &lt;arg&gt;    select authentication type [SIMPLE|KERBEROS]
+                     -oozie &lt;arg&gt;   Oozie URL
+
+      oozie sla &lt;OPTIONS&gt; : sla operations (Deprecated with Oozie 4.0)
+                -auth &lt;arg&gt;     select authentication type [SIMPLE|KERBEROS]
+                -filter &lt;arg&gt;   filter of SLA events. e.g., jobid=&lt;J&gt;\;appname=&lt;A&gt;
+                -len &lt;arg&gt;      number of results (default '</span><span class="token number">100</span><span class="token string">', max '</span><span class="token number">1000</span><span class="token string">')
+                -offset &lt;arg&gt;   start offset (default '</span><span class="token number">0</span><span class="token string">')
+                -oozie &lt;arg&gt;    Oozie URL
+
+      oozie pig &lt;OPTIONS&gt; -X &lt;ARGS&gt; : submit a pig job, everything after '</span>-X<span class="token string">' are pass-through parameters to pig, any '</span>-D<span class="token string">' arguments after '</span>-X<span class="token string">' are put in &lt;configuration&gt;
+                -auth &lt;arg&gt;           select authentication type [SIMPLE|KERBEROS]
+                -config &lt;arg&gt;         job configuration file '</span>.properties<span class="token string">'
+                -D &lt;property=value&gt;   set/override value for given property
+                -doas &lt;arg&gt;           doAs user, impersonates as the specified user
+                -file &lt;arg&gt;           pig script
+                -oozie &lt;arg&gt;          Oozie URL
+                -P &lt;property=value&gt;   set parameters for script
+
+      oozie hive &lt;OPTIONS&gt; -X &lt;ARGS&gt; : submit a hive job, everything after '</span>-X<span class="token string">' are pass-through parameters to hive, any '</span>-D<span class="token string">' arguments after '</span>-X<span class="token string">' are put in &lt;configuration&gt;
+                 -auth &lt;arg&gt;           select authentication type [SIMPLE|KERBEROS]
+                 -config &lt;arg&gt;         job configuration file '</span>.properties<span class="token string">'
+                 -D &lt;property=value&gt;   set/override value for given property
+                 -doas &lt;arg&gt;           doAs user, impersonates as the specified user
+                 -file &lt;arg&gt;           hive script
+                 -oozie &lt;arg&gt;          Oozie URL
+                 -P &lt;property=value&gt;   set parameters for script
+
+      oozie sqoop &lt;OPTIONS&gt; -X &lt;ARGS&gt; : submit a sqoop job, everything after '</span>-X<span class="token string">' are pass-through parameters to sqoop, any '</span>-D<span class="token string">' arguments after '</span>-X<span class="token string">' are put in &lt;configuration&gt;
+                  -auth &lt;arg&gt;           select authentication type [SIMPLE|KERBEROS]
+                  -command &lt;command&gt;    sqoop command
+                  -config &lt;arg&gt;         job configuration file '</span>.properties<span class="token string">'
+                  -D &lt;property=value&gt;   set/override value for given property
+                  -doas &lt;arg&gt;           doAs user, impersonates as the specified user
+                  -oozie &lt;arg&gt;          Oozie URL
+
+      oozie info &lt;OPTIONS&gt; : get more detailed info about specific topics
+                 -timezones   display a list of available time zones
+
+      oozie mapreduce &lt;OPTIONS&gt; : submit a mapreduce job
+                      -auth &lt;arg&gt;           select authentication type [SIMPLE|KERBEROS]
+                      -config &lt;arg&gt;         job configuration file '</span>.properties'
+                      -D <span class="token operator">&lt;</span>property<span class="token operator">=</span>value<span class="token operator">&gt;</span>   set/override value <span class="token keyword">for</span> given property
+                      -doas <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>           doAs user, impersonates as the specified user
+                      -oozie <span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span>          Oozie URL
+</code></pre></div><h2 id="使用oozie调度mr任务"><a href="#使用oozie调度mr任务" class="header-anchor">#</a> 使用oozie调度MR任务</h2> <h4 id="第一步-准备mr执行的数据"><a href="#第一步-准备mr执行的数据" class="header-anchor">#</a> 第一步：准备MR执行的数据</h4> <p>选用hadoop工程自带的MR程序来运行wordcount的示例</p> <p>准备以下数据上传到HDFS的/oozie/input路径下去</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hdfs dfs -mkdir -p /oozie/input
+<span class="token builtin class-name">cd</span> /tmp/
+<span class="token function">vim</span> wordcount.txt
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>hello  world  hadoop
+spark  hive  hadoop
+</code></pre></div><p>将我们的数据上传到hdfs对应目录</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hdfs dfs -put /tmp/wordcount.txt /oozie/input
+</code></pre></div><h4 id="第二步-执行官方测试案例"><a href="#第二步-执行官方测试案例" class="header-anchor">#</a> 第二步：执行官方测试案例</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">yarn</span> jar /kkb/install/hadoop-2.6.0-cdh5.14.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0-cdh5.14.2.jar wordcount /oozie/input/ /oozie/output
+</code></pre></div><h4 id="第三步-准备我们调度的资源"><a href="#第三步-准备我们调度的资源" class="header-anchor">#</a> 第三步：准备我们调度的资源</h4> <p>将我们需要调度的资源都准备好放到一个文件夹下面去，包括我们的jar包，我们的job.properties，以及我们的workflow.xml。</p> <p>拷贝MR的任务模板</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+<span class="token function">cp</span> -ra examples/apps/map-reduce/ oozie_works/
+</code></pre></div><p>删掉MR任务模板lib目录下自带的jar包</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/map-reduce/lib
+
+<span class="token function">rm</span> -rf oozie-examples-4.1.0-cdh5.14.2.jar
+</code></pre></div><h4 id="第三步-拷贝我们自己的jar包到对应目录"><a href="#第三步-拷贝我们自己的jar包到对应目录" class="header-anchor">#</a> 第三步：拷贝我们自己的jar包到对应目录</h4> <p>从上一步的删除当中，我们可以看到我们需要调度的jar包存放在了</p> <div class="language-sh extra-class"><pre class="language-sh"><code>/kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/map-reduce/lib
+</code></pre></div><p>这个目录下，所以我们把我们需要调度的jar包也放到这个路径下即可</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">cp</span> /kkb/install/hadoop-2.6.0-cdh5.14.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0-cdh5.14.2.jar /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/map-reduce/lib/
+
+<span class="token punctuation">[</span>hadoop@node03 lib<span class="token punctuation">]</span>$ <span class="token function">ls</span>
+hadoop-mapreduce-examples-2.6.0-cdh5.14.2.jar
+</code></pre></div><h4 id="第四步-修改配置文件"><a href="#第四步-修改配置文件" class="header-anchor">#</a> 第四步：修改配置文件</h4> <p>修改job.properties</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/map-reduce
+<span class="token function">vim</span> job.properties
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token assign-left variable">nameNode</span><span class="token operator">=</span>hdfs://node01:8020
+<span class="token assign-left variable">jobTracker</span><span class="token operator">=</span>node01:8032
+<span class="token assign-left variable">queueName</span><span class="token operator">=</span>default
+<span class="token assign-left variable">examplesRoot</span><span class="token operator">=</span>oozie_works
+oozie.wf.application.path<span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/map-reduce/workflow.xml
+<span class="token assign-left variable">outputDir</span><span class="token operator">=</span>/oozie/output
+<span class="token assign-left variable">inputdir</span><span class="token operator">=</span>/oozie/input
+</code></pre></div><p>修改workflow.xml</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/map-reduce
+<span class="token function">vim</span> workflow.xml
+</code></pre></div><p>要修改的地方如下：</p> <ol><li>26行：<delete path="${nameNode}/${outputDir}"></delete></li> <li>33行-56行的内容全部注释掉，这个是hadoop1.x的内容</li> <li>注释掉后，将57行-105行的内容添加上来</li></ol> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token comment">&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  &quot;License&quot;); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:workflow:0.5<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>map-reduce-wf<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>start</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mr-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mr-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-reduce</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prepare</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/${outputDir}<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>prepare</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+				<span class="token comment">&lt;!--  
+                &lt;property&gt;
+                    &lt;name&gt;mapred.mapper.class&lt;/name&gt;
+                    &lt;value&gt;org.apache.oozie.example.SampleMapper&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.reducer.class&lt;/name&gt;
+                    &lt;value&gt;org.apache.oozie.example.SampleReducer&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.map.tasks&lt;/name&gt;
+                    &lt;value&gt;1&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.input.dir&lt;/name&gt;
+                    &lt;value&gt;/user/${wf:user()}/${examplesRoot}/input-data/text&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.output.dir&lt;/name&gt;
+                    &lt;value&gt;/user/${wf:user()}/${examplesRoot}/output-data/${outputDir}&lt;/value&gt;
+                &lt;/property&gt;
+				--&gt;</span>
+				
+				   <span class="token comment">&lt;!-- 开启使用新的API来进行配置 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.mapper.new-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.reducer.new-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定MR的输出key的类型 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.output.key.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.io.Text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定MR的输出的value的类型--&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.output.value.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.io.IntWritable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定输入路径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.input.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${nameNode}/${inputdir}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定输出路径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.output.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${nameNode}/${outputDir}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定执行的map类 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.map.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.examples.WordCount$TokenizerMapper<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定执行的reduce类 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.reduce.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.examples.WordCount$IntSumReducer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+				<span class="token comment">&lt;!--  配置map task的个数 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.map.tasks<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-reduce</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Map/Reduce failed, error message[${wf:errorMessage(wf:lastErrorNode())}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>end</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow-app</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="第五步-上传调度任务到hdfs对应目录"><a href="#第五步-上传调度任务到hdfs对应目录" class="header-anchor">#</a> 第五步：上传调度任务到hdfs对应目录</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+hdfs dfs -put map-reduce/ /user/hadoop/oozie_works/
+</code></pre></div><h4 id="第六步-执行调度任务"><a href="#第六步-执行调度任务" class="header-anchor">#</a> 第六步：执行调度任务</h4> <p>执行我们的调度任务，然后通过oozie的11000端口进行查看任务结果</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+bin/oozie job -oozie http://node03:11000/oozie -config oozie_works/map-reduce/job.properties -run
+</code></pre></div><h4 id="第七步-查看效果"><a href="#第七步-查看效果" class="header-anchor">#</a> 第七步：查看效果</h4> <p>登录http://node03:11000/oozie/</p> <p><img src="/assets/img/image-20200408003034574.c84d90ba.png" alt="image-20200408003034574"></p> <h2 id="oozie的任务串联"><a href="#oozie的任务串联" class="header-anchor">#</a> oozie的任务串联</h2> <p>在实际工作当中，肯定会存在多个任务需要执行，并且存在上一个任务的输出结果作为下一个任务的输入数据这样的情况，所以我们需要在workflow.xml配置文件当中配置多个action，实现多个任务之间的相互依赖关系</p> <p>需求：首先执行一个shell脚本，执行完了之后再执行一个MR的程序，最后再执行一个hive的程序</p> <h4 id="第一步-准备我们的工作目录"><a href="#第一步-准备我们的工作目录" class="header-anchor">#</a> 第一步：准备我们的工作目录</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+<span class="token function">mkdir</span> -p sereval-actions
+</code></pre></div><h4 id="第二步-准备我们的调度文件"><a href="#第二步-准备我们的调度文件" class="header-anchor">#</a> 第二步：准备我们的调度文件</h4> <p>将我们之前的hive，shell，以及MR的执行，进行串联成到一个workflow当中去，准备我们的资源文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+<span class="token function">cp</span> hive2/script.q sereval-actions/
+<span class="token function">cp</span> shell/hello.sh sereval-actions/
+<span class="token function">cp</span> -ra map-reduce/lib sereval-actions/
+
+<span class="token punctuation">[</span>hadoop@node03 sereval-actions<span class="token punctuation">]</span>$ <span class="token builtin class-name">pwd</span>
+/kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/sereval-actions
+<span class="token punctuation">[</span>hadoop@node03 sereval-actions<span class="token punctuation">]</span>$ <span class="token function">ls</span>
+hello.sh  lib  script.q
+</code></pre></div><h4 id="第三步-开发调度的配置文件"><a href="#第三步-开发调度的配置文件" class="header-anchor">#</a> 第三步：开发调度的配置文件</h4> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/sereval-actions
+</code></pre></div><p>创建配置文件workflow.xml并编辑</p> <div class="language- extra-class"><pre class="language-text"><code>vim workflow.xml
+</code></pre></div><p>单个任务时，配置文件内容大致如下：</p> <p><code>&lt;action&gt;...&lt;/action&gt;</code></p> <p>多个任务时，配置文件内容就是多个action的集成，大致如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&gt; - &lt;start to=&quot;shell-node&quot;/&gt;
+&gt; - &lt;action name=&quot;shell-node&quot;&gt;
+&gt; - - &lt;ok to=&quot;mr-node&quot;/&gt;
+&gt;   - &lt;error to=&quot;mr-node&quot;/&gt;
+&gt; - &lt;/action&gt;
+&gt; - &lt;action name=&quot;mr-node&quot;&gt;
+&gt; - - &lt;ok to=&quot;hive2-node&quot;/&gt;
+&gt;   - &lt;error to=&quot;fail&quot;/&gt;
+&gt; - &lt;/action&gt;
+&gt; - &lt;action name=&quot;hive2-node&quot;&gt;
+&gt; - - &lt;ok to=&quot;end&quot;/&gt;
+&gt;   - &lt;error to=&quot;fail&quot;/&gt;
+&gt; - &lt;/action&gt;
+</code></pre></div><p>将下面代码块所有内容添加到配置文件里：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:workflow:0.4<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-wf<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>start</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shell-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>shell</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:shell-action:0.2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec</span><span class="token punctuation">&gt;</span></span>${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- &lt;argument&gt;my_output=Hello Oozie&lt;/argument&gt; --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>/user/hadoop/oozie_works/sereval-actions/${EXEC}#${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>capture-output</span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>shell</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mr-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mr-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mr-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-reduce</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prepare</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/${outputDir}<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>prepare</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+				<span class="token comment">&lt;!--  
+                &lt;property&gt;
+                    &lt;name&gt;mapred.mapper.class&lt;/name&gt;
+                    &lt;value&gt;org.apache.oozie.example.SampleMapper&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.reducer.class&lt;/name&gt;
+                    &lt;value&gt;org.apache.oozie.example.SampleReducer&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.map.tasks&lt;/name&gt;
+                    &lt;value&gt;1&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.input.dir&lt;/name&gt;
+                    &lt;value&gt;/user/${wf:user()}/${examplesRoot}/input-data/text&lt;/value&gt;
+                &lt;/property&gt;
+                &lt;property&gt;
+                    &lt;name&gt;mapred.output.dir&lt;/name&gt;
+                    &lt;value&gt;/user/${wf:user()}/${examplesRoot}/output-data/${outputDir}&lt;/value&gt;
+                &lt;/property&gt;
+				--&gt;</span>
+				
+				   <span class="token comment">&lt;!-- 开启使用新的API来进行配置 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.mapper.new-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.reducer.new-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定MR的输出key的类型 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.output.key.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.io.Text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定MR的输出的value的类型--&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.output.value.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.io.IntWritable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定输入路径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.input.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${nameNode}/${inputdir}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定输出路径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.output.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${nameNode}/${outputDir}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定执行的map类 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.map.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.examples.WordCount$TokenizerMapper<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment">&lt;!-- 指定执行的reduce类 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapreduce.job.reduce.class<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>org.apache.hadoop.examples.WordCount$IntSumReducer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+				<span class="token comment">&lt;!--  配置map task的个数 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.map.tasks<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-reduce</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hive2-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hive2-node<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hive2</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:hive2-action:0.1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prepare</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/user/${wf:user()}/${examplesRoot}/output-data/hive2<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mkdir</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${nameNode}/user/${wf:user()}/${examplesRoot}/output-data<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>prepare</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdbc-url</span><span class="token punctuation">&gt;</span></span>${jdbcURL}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jdbc-url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>script.q<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>INPUT=/user/${wf:user()}/${examplesRoot}/input-data/table<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>OUTPUT=/user/${wf:user()}/${examplesRoot}/output-data/hive2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>hive2</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>decision</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>check-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>switch</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>case</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            ${wf:actionData('shell-node')['my_output'] eq 'Hello Oozie'}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>case</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>default</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>switch</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>decision</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Shell action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kill</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fail-output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>Incorrect output, expected [Hello Oozie] but was [${wf:actionData('shell-node')['my_output']}]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kill</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>end</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow-app</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>开发我们的job.properties配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/sereval-actions
+vim job.properties
+</code></pre></div><p>内容就是多个任务的参数的综合：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token assign-left variable">nameNode</span><span class="token operator">=</span>hdfs://node01:8020
+<span class="token assign-left variable">jobTracker</span><span class="token operator">=</span>node01:8032
+<span class="token assign-left variable">queueName</span><span class="token operator">=</span>default
+<span class="token assign-left variable">examplesRoot</span><span class="token operator">=</span>oozie_works
+<span class="token assign-left variable">EXEC</span><span class="token operator">=</span>hello.sh
+<span class="token assign-left variable">outputDir</span><span class="token operator">=</span>/oozie/output
+<span class="token assign-left variable">inputdir</span><span class="token operator">=</span>/oozie/input
+<span class="token assign-left variable">jdbcURL</span><span class="token operator">=</span>jdbc:hive2://node03:10000/default
+oozie.use.system.libpath<span class="token operator">=</span>true
+<span class="token comment">## 配置我们文件上传到hdfs的保存路径</span>
+oozie.wf.application.path<span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/sereval-actions/workflow.xml 
+</code></pre></div><h4 id="第四步-上传我们的资源文件夹到hdfs对应路径"><a href="#第四步-上传我们的资源文件夹到hdfs对应路径" class="header-anchor">#</a> 第四步：上传我们的资源文件夹到hdfs对应路径</h4> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/
+hdfs dfs -put sereval-actions/ /user/hadoop/oozie_works/
+</code></pre></div><h4 id="第五步-执行调度任务"><a href="#第五步-执行调度任务" class="header-anchor">#</a> 第五步：执行调度任务</h4> <p>要保证hiveserver2服务已经开启。</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/
+<span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ bin/oozie job -oozie http://node03:11000/oozie -config oozie_works/sereval-actions/job.properties -run
+<span class="token comment">#之前出现了一次错误，不知道为什么，下面一行内容建议使用tab补全功能输入</span>
+<span class="token comment">#oozie_works/sereval-actions/job.properties</span>
+</code></pre></div><h4 id="第六步-查看效果"><a href="#第六步-查看效果" class="header-anchor">#</a> 第六步：查看效果</h4> <p>http://node03:11000/oozie/</p> <img src="http://node03:11000/oozie/v2/job/0000003-200406202248813-oozie-hado-W?show=graph" alt="Runtime error : Can't display the graph. Number of actions are more than display limit 25" style="zoom:80%;"> <h2 id="oozie定时任务执行"><a href="#oozie定时任务执行" class="header-anchor">#</a> oozie定时任务执行</h2> <p>在oozie当中，主要是通过Coordinator 来实现任务的定时调度，与我们的workflow类似的，Coordinator 这个模块也是主要通过xml来进行配置即可，接下来我们就来看看如何配置Coordinator 来实现任务的定时调度</p> <p>Coordinator 的调度主要可以有两种实现方式：</p> <p>第一种：基于时间的定时任务调度, oozie基于时间的调度主要需要指定三个参数，第一个起始时间，第二个结束时间，第三个调度频率</p> <p>第二种：基于数据的任务调度，只有在有了数据才会去出发执行，只要在有了数据才会触发调度任务。</p> <h5 id="第一步-拷贝定时任务的调度模板"><a href="#第一步-拷贝定时任务的调度模板" class="header-anchor">#</a> 第一步：拷贝定时任务的调度模板</h5> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2
+cp -r examples/apps/cron oozie_works/cron-job
+</code></pre></div><h5 id="第二步-拷贝我们的hello-sh脚本"><a href="#第二步-拷贝我们的hello-sh脚本" class="header-anchor">#</a> 第二步：拷贝我们的hello.sh脚本</h5> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+cp shell/hello.sh cron-job/
+</code></pre></div><h5 id="第三步-修改配置文件"><a href="#第三步-修改配置文件" class="header-anchor">#</a> 第三步：修改配置文件</h5> <h6 id="修改job-properties"><a href="#修改job-properties" class="header-anchor">#</a> 修改job.properties</h6> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works/cron-job
+vim job.properties
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token assign-left variable">nameNode</span><span class="token operator">=</span>hdfs://node01:8020
+<span class="token assign-left variable">jobTracker</span><span class="token operator">=</span>node01:8032
+<span class="token assign-left variable">queueName</span><span class="token operator">=</span>default
+<span class="token assign-left variable">examplesRoot</span><span class="token operator">=</span>oozie_works
+oozie.coord.application.path<span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/cron-job/coordinator.xml
+
+<span class="token assign-left variable">start</span><span class="token operator">=</span><span class="token number">2018</span>-08-22T19:20+0800
+<span class="token assign-left variable">end</span><span class="token operator">=</span><span class="token number">2019</span>-08-22T19:20+0800
+<span class="token assign-left variable">EXEC</span><span class="token operator">=</span>hello.sh
+<span class="token assign-left variable">workflowAppUri</span><span class="token operator">=</span><span class="token variable">${nameNode}</span>/user/<span class="token variable">${user.name}</span>/<span class="token variable">${examplesRoot}</span>/cron-job/workflow.xml
+</code></pre></div><h6 id="修改coordinator-xml"><a href="#修改coordinator-xml" class="header-anchor">#</a> 修改coordinator.xml</h6> <div class="language- extra-class"><pre class="language-text"><code>vim coordinator.xml
+</code></pre></div><p>要修改的地方如下：</p> <ul><li>name=&quot;cron-job&quot;</li> <li>frequency=&quot;${coord:minutes(1)}&quot;</li> <li>timezone=&quot;GMT+0800&quot;</li> <li>xmlns=&quot;uri:oozie:coordinator:0.4&quot;</li></ul> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--
+	oozie的frequency 可以支持很多表达式，其中可以通过定时每分，或者每小时，或者每天，或者每月进行执行，也支持可以通过与linux的crontab表达式类似的写法来进行定时任务的执行
+	例如frequency 也可以写成以下方式
+	frequency=&quot;10 9 * * *&quot;  每天上午的09:10:00开始执行任务
+	frequency=&quot;0 1 * * *&quot;  每天凌晨的01:00开始执行任务
+ --&gt;</span>
+<span class="token comment">&lt;!-- frequency=&quot;${coord:minutes(1)}&quot; 表示每隔一分钟执行一次--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coordinator-app</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>cron-job<span class="token punctuation">&quot;</span></span> <span class="token attr-name">frequency</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${coord:minutes(1)}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">start</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${start}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">end</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${end}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">timezone</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>GMT+0800<span class="token punctuation">&quot;</span></span>
+                 <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:coordinator:0.4<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-path</span><span class="token punctuation">&gt;</span></span>${workflowAppUri}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-path</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>jobTracker<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>nameNode<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>queueName<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>coordinator-app</span><span class="token punctuation">&gt;</span></span> 
+</code></pre></div><h6 id="修改workflow-xml"><a href="#修改workflow-xml" class="header-anchor">#</a> 修改workflow.xml</h6> <div class="language- extra-class"><pre class="language-text"><code>vim workflow.xml
+</code></pre></div><p>要修改的地方如下：</p> <ul><li>添加<code>&lt;shell&gt;..&lt;/shell&gt;</code>之间的所有内容</li></ul> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>workflow-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:workflow:0.5<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>one-op-wf<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>start</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>action1<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>action1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>shell</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>uri:oozie:shell-action:0.2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-tracker</span><span class="token punctuation">&gt;</span></span>${jobTracker}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-tracker</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name-node</span><span class="token punctuation">&gt;</span></span>${nameNode}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name-node</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mapred.job.queue.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>${queueName}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec</span><span class="token punctuation">&gt;</span></span>${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- &lt;argument&gt;my_output=Hello Oozie&lt;/argument&gt; --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>/user/hadoop/oozie_works/cron-job/${EXEC}#${EXEC}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>capture-output</span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>shell</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ok</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>end</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>end<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>workflow-app</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h5 id="第四步-上传到hdfs对应路径"><a href="#第四步-上传到hdfs对应路径" class="header-anchor">#</a> 第四步：上传到hdfs对应路径</h5> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2/oozie_works
+hdfs dfs -put cron-job/ /user/hadoop/oozie_works/
+</code></pre></div><h5 id="第五步-运行定时任务"><a href="#第五步-运行定时任务" class="header-anchor">#</a> 第五步：运行定时任务</h5> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+bin/oozie job -oozie http://node03:11000/oozie -config oozie_works/cron-job/job.properties -run
+</code></pre></div><h5 id="第六步-查看效果-2"><a href="#第六步-查看效果-2" class="header-anchor">#</a> 第六步：查看效果</h5> <p><img src="/assets/img/image-20200410155923280.68a0517d.png" alt="image-20200410155923280"></p> <h2 id="oozie任务的查看及杀死"><a href="#oozie任务的查看及杀死" class="header-anchor">#</a> oozie任务的查看及杀死</h2> <h5 id="查看所有普通任务"><a href="#查看所有普通任务" class="header-anchor">#</a> 查看所有普通任务</h5> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ oozie <span class="token function">jobs</span>
+Job ID                                   App Name     Status    User      Group     Started                 Ended                   
+--------------------------------------------------------------------------------------
+0000003-200406202248813-oozie-hado-W     shell-wf     SUCCEEDED hadoop    -         <span class="token number">2020</span>-04-07 <span class="token number">17</span>:19 GMT    <span class="token number">2020</span>-04-07 <span class="token number">17</span>:21 GMT    
+--------------------------------------------------------------------------------------
+0000002-200406202248813-oozie-hado-W     map-reduce-wfSUCCEEDED hadoop    -         <span class="token number">2020</span>-04-07 <span class="token number">16</span>:29 GMT    <span class="token number">2020</span>-04-07 <span class="token number">16</span>:30 GMT    
+--------------------------------------------------------------------------------------
+0000001-200406202248813-oozie-hado-W     hive2-wf     SUCCEEDED hadoop    -         <span class="token number">2020</span>-04-07 <span class="token number">15</span>:59 GMT    <span class="token number">2020</span>-04-07 <span class="token number">16</span>:04 GMT    
+--------------------------------------------------------------------------------------
+0000000-200406202248813-oozie-hado-W     shell-wf     SUCCEEDED hadoop    -         <span class="token number">2020</span>-04-06 <span class="token number">13</span>:22 GMT    <span class="token number">2020</span>-04-06 <span class="token number">13</span>:23 GMT    
+--------------------------------------------------------------------------------------
+</code></pre></div><h5 id="查看定时任务"><a href="#查看定时任务" class="header-anchor">#</a> 查看定时任务</h5> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>hadoop@node03 oozie-4.1.0-cdh5.14.2<span class="token punctuation">]</span>$ oozie <span class="token function">jobs</span> -jobtype coordinator
+Job ID                                   App Name       Status    Freq Unit         Started                 Next Materialized       
+--------------------------------------------------------------------------------------
+0000004-200406202248813-oozie-hado-C     cron-job       PREP      <span class="token number">1</span>    MINUTE       <span class="token number">2020</span>-04-10 <span class="token number">16</span>:00 GMT    -                       
+--------------------------------------------------------------------------------------
+</code></pre></div><h5 id="杀死某个任务"><a href="#杀死某个任务" class="header-anchor">#</a> 杀死某个任务</h5> <p>oozie可以通过jobid来杀死某个定时任务，语法：oozie job -kill [id]</p> <div class="language-sh extra-class"><pre class="language-sh"><code>oozie job -kill 0000004-200406202248813-oozie-hado-C
+</code></pre></div><p>定时任务被杀死后，Status会显示KILLED。<img src="/assets/img/image-20200410160425194.78f6c137.png" alt="image-20200410160425194"></p> <h2 id="hue整合oozie"><a href="#hue整合oozie" class="header-anchor">#</a> hue整合oozie</h2> <h4 id="第一步-停止oozie与hue的进程"><a href="#第一步-停止oozie与hue的进程" class="header-anchor">#</a> 第一步：停止oozie与hue的进程</h4> <p>停止oozie进程：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+bin/oozied.sh stop
+
+<span class="token comment">#通过jps查看，没有BootStrap进程就代表停掉了</span>
+</code></pre></div><h4 id="第二步-修改oozie的配置文件"><a href="#第二步-修改oozie的配置文件" class="header-anchor">#</a> 第二步：修改oozie的配置文件</h4> <p>这个是老版本的bug，新版本已经不需要修改和上传了，这一步我们都不需要做了</p> <p>修改oozie的配置文件oozie-site.xml---不需要</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.service.WorkflowAppService.system.libpath<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>/user/oozie/share/lib<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>oozie.use.system.libpath<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>重新上传所有的jar包到hdfs的/user/oozie/share/lib路径下去---不需要</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /kkb/install/oozie-4.1.0-cdh5.14.2
+
+bin/oozie-setup.sh sharelib create -fs hdfs://node01:8020 -locallib oozie-sharelib-4.1.0-cdh5.14.2-yarn.tar.gz
+</code></pre></div><h4 id="第三步-修改hue的配置文件"><a href="#第三步-修改hue的配置文件" class="header-anchor">#</a> 第三步：修改hue的配置文件</h4> <p>修改hue的配置文件hue.ini----&gt;通过notepad修改即可</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>liboozie<span class="token punctuation">]</span>
+<span class="token comment">## The URL where the Oozie service runs on. This is required in order for</span>
+<span class="token comment">## users to submit jobs. Empty value disables the config check.</span>
+<span class="token assign-left variable">oozie_url</span><span class="token operator">=</span>http://node03:11000/oozie
+
+<span class="token comment">## Requires FQDN in oozie_url if enabled</span>
+<span class="token comment">## security_enabled=false</span>
+<span class="token comment">## Location on HDFS where the workflows/coordinator are deployed when submitted.</span>
+<span class="token assign-left variable">remote_deployement_dir</span><span class="token operator">=</span>/user/hadoop/oozie_works
+</code></pre></div><p>修改[oozie]，大概在1151行左右的样子</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>oozie<span class="token punctuation">]</span>
+<span class="token comment">## Location on local FS where the examples are stored.</span>
+  <span class="token comment">## local_data_dir=/kkb/install/oozie-4.1.0-cdh5.14.2/examples/apps</span>
+
+  <span class="token comment">## Location on local FS where the data for the examples is stored.</span>
+  <span class="token comment">## sample_data_dir=/kkb/install/oozie-4.1.0-cdh5.14.2/examples/input-data</span>
+
+  <span class="token comment">## Location on HDFS where the oozie examples and workflows are stored.</span>
+  <span class="token comment">## Parameters are $TIME and $USER, e.g. /user/$USER/hue/workspaces/workflow-$TIME</span>
+  <span class="token comment">## remote_data_dir=/user/root/oozie_works/examples/apps</span>
+
+  <span class="token comment">## Maximum of Oozie workflows or coodinators to retrieve in one API call.</span>
+  <span class="token assign-left variable">oozie_jobs_count</span><span class="token operator">=</span><span class="token number">100</span>
+
+  <span class="token comment">## Use Cron format for defining the frequency of a Coordinator instead of the old frequency number/unit.</span>
+  <span class="token assign-left variable">enable_cron_scheduling</span><span class="token operator">=</span>true
+
+  <span class="token comment">## Flag to enable the saved Editor queries to be dragged and dropped into a workflow.</span>
+  <span class="token assign-left variable">enable_document_action</span><span class="token operator">=</span>true
+
+  <span class="token comment">## Flag to enable Oozie backend filtering instead of doing it at the page level in Javascript. Requires Oozie 4.3+.</span>
+  <span class="token assign-left variable">enable_oozie_backend_filtering</span><span class="token operator">=</span>true
+
+  <span class="token comment">## Flag to enable the Impala action.</span>
+  <span class="token assign-left variable">enable_impala_action</span><span class="token operator">=</span>true
+
+<span class="token punctuation">[</span>filebrowser<span class="token punctuation">]</span>
+<span class="token comment">## Location on local filesystem where the uploaded archives are temporary stored.</span>
+  <span class="token assign-left variable">archive_upload_tempdir</span><span class="token operator">=</span>/tmp
+
+  <span class="token comment">## Show Download Button for HDFS file browser.</span>
+  <span class="token assign-left variable">show_download_button</span><span class="token operator">=</span>true
+
+  <span class="token comment">## Show Upload Button for HDFS file browser.</span>
+  <span class="token assign-left variable">show_upload_button</span><span class="token operator">=</span>true
+
+  <span class="token comment">## Flag to enable the extraction of a uploaded archive in HDFS.</span>
+  <span class="token assign-left variable">enable_extract_uploaded_archive</span><span class="token operator">=</span>true
+</code></pre></div><h4 id="第四步-启动hue与oozie的进程"><a href="#第四步-启动hue与oozie的进程" class="header-anchor">#</a> 第四步：启动hue与oozie的进程</h4> <p>启动hue进程</p> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/hue-3.9.0-cdh5.14.2
+build/env/bin/supervisor
+</code></pre></div><p>启动oozie进程</p> <div class="language- extra-class"><pre class="language-text"><code>cd /kkb/install/oozie-4.1.0-cdh5.14.2
+bin/oozied.sh start
+</code></pre></div><h4 id="第五步-页面访问hue"><a href="#第五步-页面访问hue" class="header-anchor">#</a> 第五步：页面访问hue</h4> <p>http://node03.hadoop.com:8888/</p> <h6 id="添加oozie-workflow任务"><a href="#添加oozie-workflow任务" class="header-anchor">#</a> 添加oozie workflow任务</h6> <p>事先写好hql/impala sql等，或者准备好mapreduce jar包等，然后通过拉拽的方式设置即可。</p> <p><img src="/assets/img/image-20200410170101378.21f546be.png" alt="image-20200410170101378"></p> <h6 id="添加oozie-定时任务"><a href="#添加oozie-定时任务" class="header-anchor">#</a> 添加oozie 定时任务</h6> <p>添加好oozie workflow之后，就可以将该workflow设置为定时任务了。</p> <p><img src="/assets/img/image-20200410170536143.96aadccb.png" alt="image-20200410170536143"></p> <p><img src="/assets/img/image-20200410170600805.6e819f20.png" alt="image-20200410170600805"></p> <p><img src="/assets/img/image-20200410170715921.5031cbca.png" alt="image-20200410170715921"></p> <img src="oozie.assets/image-20200410171154007.png" alt="image-20200410171154007" style="zoom:67%;"> <h2 id="oozie使用过程当中可能遇到的问题"><a href="#oozie使用过程当中可能遇到的问题" class="header-anchor">#</a> oozie使用过程当中可能遇到的问题</h2> <ol><li>Mysql权限配置</li></ol> <p>授权所有主机可以使用root用户操作所有数据库和数据表</p> <div class="language-sql extra-class"><pre class="language-sql"><code>mysql<span class="token operator">&gt;</span> <span class="token keyword">grant</span> <span class="token keyword">all</span> <span class="token keyword">on</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">to</span> root<span class="token variable">@'%'</span> identified <span class="token keyword">by</span> <span class="token string">'123456'</span> <span class="token keyword">with</span>  <span class="token keyword">grant</span> <span class="token keyword">option</span><span class="token punctuation">;</span>  
+mysql<span class="token operator">&gt;</span> flush <span class="token keyword">privileges</span><span class="token punctuation">;</span>  
+mysql<span class="token operator">&gt;</span> <span class="token keyword">exit</span><span class="token punctuation">;</span>  
+</code></pre></div><ol start="2"><li><p>workflow.xml配置的时候不要忽略file属性</p></li> <li><p>jps查看进程时，注意有没有bootstrap</p></li></ol> <p><strong>4)</strong> 关闭oozie</p> <p>如果bin/oozied.sh stop无法关闭，则可以使用kill -9 [pid]，之后oozie根目录下的oozie-server/temp/xxx.pid文件一定要删除。</p> <p>**5) **Oozie重新打包时，一定要注意先关闭进程，删除对应文件夹下面的pid文件。（可以参考第4条目）</p> <p><strong>6)</strong> 配置文件一定要生效</p> <p>起始标签和结束标签无对应则不生效，配置文件的属性写错了，那么则执行默认的属性。</p> <ol start="7"><li><p>libext下边的jar存放于某个文件夹中，导致share/lib创建不成功**。**</p></li> <li><p>修改Hadoop配置文件，需要重启集群。一定要记得scp到其他节点。</p></li> <li><p>JobHistoryServer必须开启，集群要重启的。</p></li> <li><p>Mysql配置如果没有生效的话，默认使用derby数据库。</p></li> <li><p>在本地修改完成的job配置，必须重新上传到HDFS。</p></li> <li><p>将HDFS中上传的oozie配置文件下载下来查看是否有错误。</p></li> <li><p>Linux用户名和Hadoop的用户名不一致。</p></li></ol> <p>15）sharelib找不到，包括重新初始化oozie</p> <p>如果部署oozie出错，修复执行，初始化oozie：</p> <ol><li>停止oozie（要通过jps检查bootstrap进程是否已经不存在）</li> <li>删除oozie-server/temp/</li> <li>删除HDFS上的sharelib文件夹</li> <li>删除oozie.sql文件，删除Mysql中删除oozie库，重新创建</li> <li>重新按照顺序执行文档中oozie的安装重新再来一遍</li></ol></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/MaLunan/press/edit/dev-mln/docs/oozie/oozie.md" target="_blank" rel="noopener noreferrer">在GitHub 上编辑此页！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">1/19/2021, 1:41:59 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fdd7a502.js" defer></script><script src="/assets/js/16.375b747e.js" defer></script><script src="/assets/js/27.1518da7d.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>linux通用命令 | 个人博客 | JiiiiG</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="自是年少，韶华倾负">
+    
+    <link rel="preload" href="/assets/css/0.styles.420b7c1f.css" as="style"><link rel="preload" href="/assets/js/app.fdd7a502.js" as="script"><link rel="preload" href="/assets/js/16.375b747e.js" as="script"><link rel="preload" href="/assets/js/52.0c7cbfb1.js" as="script"><link rel="prefetch" href="/assets/js/10.bbd38b9e.js"><link rel="prefetch" href="/assets/js/11.f49fc7d3.js"><link rel="prefetch" href="/assets/js/12.c5d97aa1.js"><link rel="prefetch" href="/assets/js/13.426d0224.js"><link rel="prefetch" href="/assets/js/14.1f257a58.js"><link rel="prefetch" href="/assets/js/15.be29bb6a.js"><link rel="prefetch" href="/assets/js/17.d02cdd8b.js"><link rel="prefetch" href="/assets/js/18.5d2371a4.js"><link rel="prefetch" href="/assets/js/19.038919a3.js"><link rel="prefetch" href="/assets/js/2.d6257727.js"><link rel="prefetch" href="/assets/js/20.b3582e09.js"><link rel="prefetch" href="/assets/js/21.0c1e826b.js"><link rel="prefetch" href="/assets/js/22.91bff1a5.js"><link rel="prefetch" href="/assets/js/23.faacea60.js"><link rel="prefetch" href="/assets/js/24.69816497.js"><link rel="prefetch" href="/assets/js/25.c9fcaa62.js"><link rel="prefetch" href="/assets/js/26.d28c3abe.js"><link rel="prefetch" href="/assets/js/27.1518da7d.js"><link rel="prefetch" href="/assets/js/28.748a5581.js"><link rel="prefetch" href="/assets/js/29.775019f1.js"><link rel="prefetch" href="/assets/js/3.141002a4.js"><link rel="prefetch" href="/assets/js/30.74e7c570.js"><link rel="prefetch" href="/assets/js/31.190b11f2.js"><link rel="prefetch" href="/assets/js/32.d8f4f116.js"><link rel="prefetch" href="/assets/js/33.c489bc81.js"><link rel="prefetch" href="/assets/js/34.db609d51.js"><link rel="prefetch" href="/assets/js/35.ad3402e6.js"><link rel="prefetch" href="/assets/js/36.45f11923.js"><link rel="prefetch" href="/assets/js/37.b47e0576.js"><link rel="prefetch" href="/assets/js/38.58b934a2.js"><link rel="prefetch" href="/assets/js/39.e4d6bcdf.js"><link rel="prefetch" href="/assets/js/4.e9b44388.js"><link rel="prefetch" href="/assets/js/40.555106bc.js"><link rel="prefetch" href="/assets/js/41.4387ceb1.js"><link rel="prefetch" href="/assets/js/42.9bd4aea0.js"><link rel="prefetch" href="/assets/js/43.587e7966.js"><link rel="prefetch" href="/assets/js/44.80285763.js"><link rel="prefetch" href="/assets/js/45.f978da77.js"><link rel="prefetch" href="/assets/js/46.d93e3f2e.js"><link rel="prefetch" href="/assets/js/47.c15bd2aa.js"><link rel="prefetch" href="/assets/js/48.cb55fa72.js"><link rel="prefetch" href="/assets/js/49.d0f4e454.js"><link rel="prefetch" href="/assets/js/5.b90b80cb.js"><link rel="prefetch" href="/assets/js/50.112e8260.js"><link rel="prefetch" href="/assets/js/51.a66bcd03.js"><link rel="prefetch" href="/assets/js/53.67ef240b.js"><link rel="prefetch" href="/assets/js/54.2c2d082d.js"><link rel="prefetch" href="/assets/js/55.88f19a20.js"><link rel="prefetch" href="/assets/js/56.c726e920.js"><link rel="prefetch" href="/assets/js/57.eaee47c5.js"><link rel="prefetch" href="/assets/js/58.ac15a3ac.js"><link rel="prefetch" href="/assets/js/59.64bdc849.js"><link rel="prefetch" href="/assets/js/6.7eea74ff.js"><link rel="prefetch" href="/assets/js/7.a1370e98.js"><link rel="prefetch" href="/assets/js/8.2e898240.js"><link rel="prefetch" href="/assets/js/9.a2439994.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.420b7c1f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客 | JiiiiG</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>linux常用命令</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/linux常用命令/01linux常用命令01.html" class="active sidebar-link">linux通用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#文件和目录" class="sidebar-link">文件和目录</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#查看文件内容" class="sidebar-link">查看文件内容</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#搜索文件" class="sidebar-link">搜索文件</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#搜索文件内容" class="sidebar-link">搜索文件内容</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#打包和压缩" class="sidebar-link">打包和压缩</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#vim使用技巧" class="sidebar-link">vim使用技巧</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#软链接" class="sidebar-link">软链接</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#挂载与卸载" class="sidebar-link">挂载与卸载</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#查看磁盘空间" class="sidebar-link">查看磁盘空间</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#用户和用户组" class="sidebar-link">用户和用户组</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#文件权限" class="sidebar-link">文件权限</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#文本处理" class="sidebar-link">文本处理</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#网络" class="sidebar-link">网络</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#查看系统信息" class="sidebar-link">查看系统信息</a></li><li class="sidebar-sub-header"><a href="/linux/linux常用命令/01linux常用命令01.html#其它命令" class="sidebar-link">其它命令</a></li></ul></li><li><a href="/linux/linux常用命令/02centos命令.html" class="sidebar-link">centos命令</a></li><li><a href="/linux/linux常用命令/03ubuntu命令.html" class="sidebar-link">ubuntu命令</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux相关操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>shell编程</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="文件和目录"><a href="#文件和目录" class="header-anchor">#</a> 文件和目录</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#回上次所在的目录 </span>
+<span class="token builtin class-name">cd</span> - 
+<span class="token comment">#显示包含数字的文件或目录</span>
+<span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token punctuation">[</span><span class="token number">0</span>-9<span class="token punctuation">]</span>
+<span class="token comment">#递归创建目录</span>
+<span class="token function">mkdir</span> -p /01/02
+<span class="token comment">#同时创建多个目录</span>
+<span class="token function">mkdir</span> 01 02 03
+<span class="token comment">#删除目录并同时删除其内容</span>
+<span class="token function">rm</span> -rf dir01
+<span class="token comment">#同时删除多个目录并同时删除其内容</span>
+<span class="token function">rm</span> -rf dir01 dir02
+<span class="token comment">#复制一个文件</span>
+<span class="token function">cp</span> file01 file02
+<span class="token comment">#复制目录下的所有文件</span>
+<span class="token function">cp</span> dir01/* dir02/
+<span class="token comment">#复制一个目录</span>
+<span class="token function">cp</span> -r dir01 dir02/
+<span class="token comment">#创建一个空文件</span>
+<span class="token function">touch</span> file01
+</code></pre></div><h2 id="查看文件内容"><a href="#查看文件内容" class="header-anchor">#</a> 查看文件内容</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">cat</span>
+<span class="token function">tail</span> -f 实时查看
+<span class="token function">tail</span> -n 查看最后n行
+<span class="token function">head</span> -n 查看前n行
+<span class="token function">more</span>
+<span class="token function">less</span>
+
+<span class="token comment"># more和less的相关操作：</span>
+<span class="token comment">#	 Enter 向下n行，需要定义。默认为1行</span>
+<span class="token comment">#    Ctrl+F 向下滚动一屏</span>
+<span class="token comment">#    空格键 向下滚动一屏</span>
+<span class="token comment">#    Ctrl+B 返回上一屏</span>
+<span class="token comment">#    = 输出当前行的行号</span>
+<span class="token comment">#    q 退出more</span>
+</code></pre></div><h2 id="搜索文件"><a href="#搜索文件" class="header-anchor">#</a> 搜索文件</h2> <p><strong>查找当前目录下包含指定内容的文件：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">grep</span> -rni <span class="token string">&quot;content&quot;</span>
+<span class="token comment">#或者</span>
+<span class="token function">grep</span> <span class="token string">&quot;content&quot;</span> -r ./
+<span class="token comment">#或者</span>
+<span class="token function">grep</span> -l <span class="token string">&quot;content&quot;</span> ./*.txt
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>-r</code>参数表示递归查找当前目录的文件，<code>-n</code>会显示查找位置的行号，<code>-i</code>搜索时忽略大小写</p></div> <p><strong>根据文件名查找文件：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">find</span> / -name <span class="token string">&quot;content&quot;</span>
+<span class="token function">find</span> / -name <span class="token string">&quot;*content*&quot;</span>  <span class="token comment"># 使用通配符*(0或者任意多个)</span>
+</code></pre></div><p><strong>根据文件大小查找文件：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">find</span> / -size +100M <span class="token comment">#大于100M</span>
+<span class="token function">find</span> / -size -100M <span class="token comment">#小于100M</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>c:字节，w:双字，k:KB，M:MB，G:GB</code></p></div> <p><strong>根据访问时间查找文件：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">find</span> / -amin -10   <span class="token comment"># 查找在系统中最后10分钟访问的文件(access time)</span>
+<span class="token function">find</span> / -atime -2　　<span class="token comment"># 查找在系统中最后48小时访问的文件</span>
+</code></pre></div><p><strong>根据修改时间查找文件：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">find</span> / -mmin -5 　　 <span class="token comment"># 查找在系统中最后5分钟里修改过的文件(modify time)</span>
+<span class="token function">find</span> / -mtime -1 　 <span class="token comment"># 查找在系统中最后24小时里修改过的文件</span>
+</code></pre></div><p><strong>查找命令的可执行文件的路径：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">which</span> 可执行命令
+</code></pre></div><p><strong>查找命令的查找二进制文件、源代码文件和man手册页路径：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">whereis</span> 可执行命令
+</code></pre></div><h2 id="搜索文件内容"><a href="#搜索文件内容" class="header-anchor">#</a> 搜索文件内容</h2> <p><strong>使用grep搜索指定文件的内容：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">grep</span> --color <span class="token string">&quot;apulis&quot;</span> /root/apulis.txt  <span class="token comment">#高亮查找的字符串</span>
+<span class="token function">grep</span> -v <span class="token string">&quot;apulis&quot;</span> /root/apulis.txt     <span class="token comment">#搜索不包含特定内容的行</span>
+<span class="token function">grep</span> -i <span class="token string">&quot;apulis&quot;</span> /root/apulis.txt     <span class="token comment">#不区分大小写</span>
+<span class="token function">grep</span> <span class="token string">'^apulis'</span> /root/apulis.txt       <span class="token comment">#利用表达式，搜索特定内容开头的行</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>grep只支持基本正则表达式：</p> <ul><li>在基本正则表达式（BRE）中，只承认<code>“^”、“$”、“.”、“[”、“]”、“*”</code>这些是元字符，所有其他的字符都被识别为普通字符。</li></ul></div> <h2 id="打包和压缩"><a href="#打包和压缩" class="header-anchor">#</a> 打包和压缩</h2> <p><strong>打tar包与解tar包：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -cvf hello.tar ./backup
+<span class="token function">tar</span> -xvf hello.tar
+
+-c 打包
+-x 解包
+</code></pre></div><p><strong>gzip格式压缩与解压：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">gzip</span> hello.txt  <span class="token comment">#压缩单个文件，原文件会被删除</span>
+<span class="token function">gzip</span> -r ./backup  <span class="token comment"># 递归压缩指定文件夹下的文件,这个文件夹不会被压缩，只会压缩里面的每一个文件</span>
+
+gunzip backup.gz   <span class="token comment">#解压</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>最常用的是将<code>tar</code>命令与<code>gzip</code>命令组合起来，直接对文件夹先打包后压缩。</p></div> <hr> <p><strong>打tar包然后使用gzip压缩（.tar.gz）：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -zcvf hello.tar.gz ./backup
+</code></pre></div><p><strong>解压tar包：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -cvf hello.tar   <span class="token comment">#解压到当前路径</span>
+<span class="token function">tar</span> -cvf hello.tar -C /root/    <span class="token comment">#解压到指定路径</span>
+</code></pre></div><p><strong>解压tar.gz包：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -zxvf hello.tar.gz  <span class="token comment">#解压到当前路径</span>
+<span class="token function">tar</span> -zxvg hello.tar.gz -C /root/   <span class="token comment">#解压到指定路径</span>
+</code></pre></div><p><strong>zip压缩与解压：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">zip</span> file1 file2 <span class="token punctuation">..</span>.
+<span class="token function">unzip</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token function">file</span>
+	-n　<span class="token comment">#解压缩时不覆盖已存在的文件(而是跳过)</span>
+	-d  <span class="token comment">#将文件解压到指定路径</span>
+</code></pre></div><h2 id="vim使用技巧"><a href="#vim使用技巧" class="header-anchor">#</a> vim使用技巧</h2> <p><a href="https://www.cnblogs.com/momofan/p/5936203.html" target="_blank" rel="noopener noreferrer">参考链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>1、删除光标所在行：dd</p> <p>2、删除所有内容：按esc键后，先按gg（到达顶部），然后dG</p> <p>3、复制所有内容：按esc键后，先按gg（到达顶部），然后VG，使用鼠标拖拉选定要复制的内容，点击复制</p> <p>4、移动光标到文档首行： gg</p> <p>5、移动光标到文档尾行：G</p> <p>6、向下翻页： ctrl + f</p> <p>7、向上翻页：ctrl + b</p> <p>8、向下翻半页   ctrl + d   此比较有用</p> <p>9、向上翻半页  ctrl + u    此比较有用</p> <p>10、<strong>撤销：u</strong></p> <p>11、移动到行首/行尾：Home / End</p> <p>12、修改为paste模式（取消自动缩进）：输入:set paste回车，然后按insert</p> <p>13、查找：/查找的内容，回车，按n查找下一个</p> <p>14、显示行数： :set number</p> <p>15、跳到第n 行：:n</p> <p>16、光标所在行向左移动一个 tab： 输入&lt;&lt;</p> <p>17、光标所在行向右移动一个 tab:     输入&gt;&gt;</p></blockquote> <h2 id="软链接"><a href="#软链接" class="header-anchor">#</a> 软链接</h2> <p><strong>创建软链接：</strong></p> <p>将01目录软链接到02：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">ln</span> -s 01 02
+</code></pre></div><p>创建软连接时，不用创建文件夹，即不需要提前创建02。</p> <p>例子：</p> <div class="language-sh extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br></div><pre class="language-sh"><code><span class="token function">mkdir</span> 01
+<span class="token function">ln</span> -s 01 02
+
+lrwxrwxrwx. <span class="token number">1</span> root root    <span class="token number">2</span> <span class="token number">1</span>月  <span class="token number">23</span> <span class="token number">17</span>:25 02 -<span class="token operator">&gt;</span> 01
+</code></pre></div><p><strong>删除软链接：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code>正确做法：rm -rf 02
+错误做法：rm -rf 02/    这种做法会导致删除实际数据
+</code></pre></div><h2 id="挂载与卸载"><a href="#挂载与卸载" class="header-anchor">#</a> 挂载与卸载</h2> <p>参考链接：https://www.cnblogs.com/isme-zjh/p/11421334.html</p> <p>首先插入U盘或硬盘：</p> <p><strong>查询本机可以识别的硬盘和分区：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>fdisk -l   #通过这个命令可以知道有哪些没被挂载的U盘
+</code></pre></div><p><strong>挂载：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mount</span> /dev/sda /mnt/test   <span class="token comment">#/mnt/test必须实现存在，而且是空目录</span>
+</code></pre></div><p><strong>以只读方式挂载：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mount</span> -r /dev/sda /mnt/test
+</code></pre></div><p><strong>卸载：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">umount</span> /dev/sda
+或者
+<span class="token function">umount</span> /mnt/test
+<span class="token comment">#注意：不能进入挂载的目录下进行卸载</span>
+</code></pre></div><p><strong>强制卸载繁忙中的设备：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">fuser</span> -km /dev/sda
+</code></pre></div><p><strong>开机自动挂载：</strong></p> <p>⚠️谨慎操作，否则会导致开机失败</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> /etc/fstab <span class="token comment">#添加要自动挂载的设备</span>
+
+<span class="token comment">#要挂载的设备或伪文件系统  挂载点 文件系统类型  挂载选项 转储频率 自检次序(一般只有rootfs才用1)</span>
+<span class="token comment">#UUID=6efb8a23-bae1-427c-ab10-3caca95250b1 /boot  xfs    defaults    0 0</span>
+</code></pre></div><h2 id="查看磁盘空间"><a href="#查看磁盘空间" class="header-anchor">#</a> 查看磁盘空间</h2> <p><strong>df与du：</strong></p> <p>查看磁盘空间：<code>df -h</code></p> <div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br></div><pre class="language-sh"><code><span class="token variable">$df</span> -h
+文件系统                   1K-块    已用     可用 已用% 挂载点
+devtmpfs                  <span class="token number">485868</span>       <span class="token number">0</span>   <span class="token number">485868</span>    <span class="token number">0</span>% /dev
+tmpfs                     <span class="token number">497872</span>       <span class="token number">0</span>   <span class="token number">497872</span>    <span class="token number">0</span>% /dev/shm
+tmpfs                     <span class="token number">497872</span>    <span class="token number">7872</span>   <span class="token number">490000</span>    <span class="token number">2</span>% /run
+tmpfs                     <span class="token number">497872</span>       <span class="token number">0</span>   <span class="token number">497872</span>    <span class="token number">0</span>% /sys/fs/cgroup
+/dev/mapper/centos-root <span class="token number">17811456</span> <span class="token number">3790808</span> <span class="token number">14020648</span>   <span class="token number">22</span>% /
+/dev/sda1                <span class="token number">1038336</span>  <span class="token number">139252</span>   <span class="token number">899084</span>   <span class="token number">14</span>% /boot
+tmpfs                      <span class="token number">99576</span>       <span class="token number">0</span>    <span class="token number">99576</span>    <span class="token number">0</span>% /run/user/0
+</code></pre></div><p>查看当前目录的大小：du -sh</p> <p><strong>查看当前目录下的文件夹的大小</strong>（不包括文件）：<code>du -h --max-depth=1</code></p> <p>查看某个文件的大小：<code>du -h 文件名</code></p> <h2 id="用户和用户组"><a href="#用户和用户组" class="header-anchor">#</a> 用户和用户组</h2> <p><strong>添加新用户：</strong></p> <ul><li><code>useradd 用户名</code></li> <li><code>useradd -s xxx 用户名</code>（指定用户登录的shell）如：<code>useradd -s /bin/sh sam</code></li></ul> <p><strong>删除用户：</strong></p> <ul><li><p><code>userdel 用户名</code></p></li> <li><p><code>userdel -r 用户名</code>（把用户的主目录一起删除）</p></li></ul> <p><strong>设置用户密码：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#修改用户密码</span>
+<span class="token function">passwd</span> 用户名
+
+<span class="token comment">#修改用户密码为空（用户下一次登录时，系统就不再允许该用户登录了）</span>
+<span class="token function">passwd</span> -d 用户名
+
+<span class="token comment">#锁定某一用户，使其不能登录</span>
+<span class="token function">passwd</span> -l 用户名
+</code></pre></div><p><strong>添加用户组：</strong><code>groupadd 用户组</code></p> <p><strong>删除用户组：</strong><code>groupdel 用户组</code></p> <h2 id="文件权限"><a href="#文件权限" class="header-anchor">#</a> 文件权限</h2> <p>修改权限：</p> <p><strong>1、给单个文件添加或减少权限:</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> ugo+r 文件名
+<span class="token function">chmod</span> ugo-r 文件名
+或 
+<span class="token function">chmod</span> a+r  文件名
+<span class="token function">chmod</span> a-r  文件名
+</code></pre></div><p><strong>2、给当前目录下的所有文件或目录添加权限：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> -R a+rw *
+</code></pre></div><p><strong>3、通过数字设定权限：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> <span class="token number">777</span> 文件名
+<span class="token function">chmod</span> <span class="token number">600</span> 文件名
+<span class="token punctuation">..</span>.
+
+rwx <span class="token operator">=</span> <span class="token number">111</span> <span class="token operator">=</span> <span class="token number">7</span>
+rw- <span class="token operator">=</span> <span class="token number">110</span> <span class="token operator">=</span> <span class="token number">6</span>
+r-x <span class="token operator">=</span> <span class="token number">101</span> <span class="token operator">=</span> <span class="token number">5</span>
+r-- <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">=</span> <span class="token number">4</span>
+-wx <span class="token operator">=</span> 011 <span class="token operator">=</span> <span class="token number">3</span>
+-w- <span class="token operator">=</span> 010 <span class="token operator">=</span> <span class="token number">2</span>
+--x <span class="token operator">=</span> 001 <span class="token operator">=</span> <span class="token number">1</span>
+--- <span class="token operator">=</span> 000 <span class="token operator">=</span> <span class="token number">0</span>
+</code></pre></div><p><strong>4、更改文件的拥有者</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># chown 用户名:用户组 [文件1、文件2...]</span>
+<span class="token function">chown</span> tom:users file1 file2 file3   <span class="token comment">#同时修改多个文件的拥有者</span>
+</code></pre></div><h2 id="文本处理"><a href="#文本处理" class="header-anchor">#</a> 文本处理</h2> <p>Linux有两个主要的文本数据处理工具，sed和awk。</p> <p><strong>▶️sed（流编辑器）：</strong></p> <p>sed主要是以<strong>行</strong>为单位进行处理，可以将数据行进行替换、删除、新增、选取等特定工作。<a href="https://blog.51cto.com/13466287/2066532" target="_blank" rel="noopener noreferrer">参考链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>p 输出特定的行：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sed</span> -n <span class="token string">'p'</span> hello.txt
+<span class="token comment">#    p	输出1.txt的所有行</span>
+<span class="token comment">#    2p	输出1.txt的第二行</span>
+<span class="token comment">#    2，5p	输出1.txt的第二行到第五行</span>
+<span class="token comment">#    2，+5p	输出1.txt的第二行和第二行以后的5行</span>
+<span class="token comment">#    1～2p	输出第一行，每隔两行输出一行，也就是输出奇数行</span>
+</code></pre></div><p><strong>p 输出包含某内容的行：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sed</span> -n <span class="token string">'/hadoop/p'</span> hello.txt
+<span class="token function">sed</span> -n <span class="token string">'/[0-9]/p'</span> hello.txt   <span class="token comment">#结合正则表达式</span>
+</code></pre></div><p>⚠️<code>-n</code> 作用是屏蔽默认输出；如果不加<code>-n</code>选项，会重复输出输出满足条件的行，建议加上。</p> <p><strong>d 删除特定的行并输出未删除的行：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sed</span> <span class="token string">'2d'</span> hello.txt
+<span class="token comment">#	2d 删除第2行</span>
+<span class="token comment">#	2,3d 删除第2到第3行</span>
+</code></pre></div><p><strong>d 删除包含特定内容的行并输出未删除的行：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sed</span> <span class="token string">'/hadoop/d'</span> hello.txt
+<span class="token function">sed</span> <span class="token string">'/^[0-9]/d'</span> hello.txt
+</code></pre></div><p><strong>s 替换行中的特定内容并输出每一行：</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sed</span> <span class="token string">'s/old/new/'</span> <span class="token number">1</span>.txt
+<span class="token function">sed</span> <span class="token string">'s/hadoop/spark/'</span> <span class="token number">1</span>.txt
+</code></pre></div><p>⚠️上面所有的sed命令都不会修改源文件，除非加上 <code>-i</code> 选项。</p> <hr> <p><strong>▶️awk：</strong></p> <p>默认情况下，awk 会将如下变量分配给它在文本行中发现的数据字段：</p> <ul><li><code>$0</code> 代表整个文本行；</li> <li><code>$1</code> 代表文本行中的第 1 个数据字段；</li> <li><code>$2</code> 代表文本行中的第 2 个数据字段；</li> <li><code>$n</code> 代表文本行中的第 n 个数据字段。</li></ul> <p><strong>打印某一列：</strong></p> <div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-sh"><code>$ <span class="token function">cat</span> hello.txt
+One line of <span class="token builtin class-name">test</span> text.
+Two lines of <span class="token builtin class-name">test</span> text.
+Three lines of <span class="token builtin class-name">test</span> text.
+$ <span class="token function">cat</span> hello.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$1</span>}'</span>
+One
+Two
+Three
+</code></pre></div><p><strong>根据列是否包含内容来打印列：</strong></p> <div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code>$ <span class="token function">cat</span> hello.txt
+One line of <span class="token builtin class-name">test</span> apulis.
+Two lines of <span class="token builtin class-name">test</span> text.
+Three lines of <span class="token builtin class-name">test</span> text.
+$ <span class="token function">cat</span> hello.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'<span class="token variable">$5</span> ~ /apulis/ {print <span class="token variable">$1</span>,<span class="token variable">$4</span>}'</span>
+One <span class="token builtin class-name">test</span>    <span class="token comment">#打印第5列中包含apulis的行的第1和第4列</span>
+</code></pre></div><p><strong>根据列的值来打印列：</strong></p> <div class="language-sh extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-sh"><code>$ <span class="token function">cat</span> hello.txt
+<span class="token number">1</span> hadoop
+<span class="token number">3</span> flink
+<span class="token number">6</span> spark
+<span class="token number">4</span> flume
+$ <span class="token function">cat</span> hello.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'<span class="token variable">$1</span>&gt;4 {print <span class="token variable">$2</span>}'</span>
+spark   <span class="token comment">#打印第1列大于4的行的第2列</span>
+</code></pre></div><p>⚠️上面例子都是通过管道符来作为awk的输入。使用中，也可以使用文件作为awk的输入，如 <code>awk '{print $1}' hello.txt</code>。</p> <h2 id="网络"><a href="#网络" class="header-anchor">#</a> 网络</h2> <p><code>ifconfig</code>命令</p> <ul><li><code>ifconfig</code>：查看网络状态（能查看IP地址和子网掩码，但是不能查看网关和DNS地址），还可以临时设置某一网卡的IP地址和子网掩码。</li></ul> <p>关闭与启动网卡</p> <ul><li><code>ifdown 网卡设备名</code>：禁用该网卡设备。</li> <li><code>ifup 网卡设备名</code>：启用该网卡设备。</li></ul> <p>查询网络状态</p> <ul><li><code>netstat 选项</code>（可以用于查看当前计算机开放的端口，从而判断当前计算机启动了哪些服务）</li> <li><code>netstat -ntlp</code></li></ul> <p>域名解析：</p> <ul><li><code>nslookup [主机名或IP]</code>：进行域名或IP地址的解析</li></ul> <p><strong>下载命令：</strong><a href="https://www.linuxidc.com/Linux/2015-05/117381.htm" target="_blank" rel="noopener noreferrer">参考链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>▶️1、<code>curl</code>下载命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">curl</span> -o baidu.html www.baidu.com
+<span class="token function">curl</span> –s –o baidu.html www.baidu.com <span class="token operator">|</span><span class="token function">iconv</span> -f utf-8  <span class="token comment">#减少输出信息</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>常用参数如下：
+-c，--cookie-jar：将cookie写入到文件
+-b，--cookie：从文件中读取cookie
+-C，--continue-at：断点续传
+-d，--data：http post方式传送数据
+-D，--dump-header：把header信息写入到文件
+-F，--from：模拟http表达提交数据
+-s，--slient：减少输出信息
+-o，--output：将信息输出到文件
+-O，--remote-name：按照服务器上的文件名，存在本地
+--l，--head：仅返回头部信息
+-u，--user<span class="token punctuation">[</span>user:pass<span class="token punctuation">]</span>：设置http认证用户和密码
+-T，--upload-file：上传文件
+-e，--referer：指定引用地址
+-x，--proxy：指定代理服务器地址和端口
+-w，--write-out：输出指定格式内容
+--retry：重试次数
+--connect-timeout：指定尝试连接的最大时间/s
+</code></pre></div><p>▶️2、wget下载命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">wget</span> http://nginx.org/download/nginx-1.8.0.tar.gz
+</code></pre></div><h2 id="查看系统信息"><a href="#查看系统信息" class="header-anchor">#</a> 查看系统信息</h2> <p><code>uname -a</code>： 查看内核/操作系统/CPU信息 。  <a href="https://www.runoob.com/linux/linux-comm-uname.html" target="_blank" rel="noopener noreferrer">参考链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><code>env</code>：查看环境变量。</p> <p><code>uptime</code>： 查看系统运行时间、用户数、负载。</p> <p><code>fdisk -l</code>  ：查看所有分区。</p> <p><code>top</code> ：实时显示进程状态用户 。</p> <p><code>ps -ef</code>：  查看所有进程</p> <p><code>arch</code>：查看系统架构</p> <h2 id="其它命令"><a href="#其它命令" class="header-anchor">#</a> 其它命令</h2> <p>统计当前目录下，文件或者目录的总个数：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">wc</span> -l
+</code></pre></div><p>以大小为依据依次显示文件和目录的大小</p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">du</span> -skh * <span class="token operator">|</span> <span class="token function">sort</span> -rn
+63M     docker.github.io-master
+43M     docker.github.io-master.zip
+</code></pre></div><p><code>systemctl</code>命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>systemctl stop/start/restart/disable/enable service.name
+</code></pre></div><p><code>hostnamectl</code> 设置主机名：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hostnamectl set-hostname xxx
+</code></pre></div><p><strong>别名：</strong></p> <blockquote><p>查看别名</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">alias</span> <span class="token function">vi</span>
+</code></pre></div><p>临时设置别名：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">alias</span> <span class="token assign-left variable">kgn</span><span class="token operator">=</span><span class="token string">'kubectl get nodes'</span>
+</code></pre></div><p>永久设置别名：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> ~/.bashrc
+<span class="token comment">#添加别名：</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">kgn</span><span class="token operator">=</span><span class="token string">'kubectl get nodes'</span>
+</code></pre></div><p>取消别名：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">unalias</span> kgn
+</code></pre></div><p>让别名</p></blockquote></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/MaLunan/press/edit/dev-mln/docs/linux/linux常用命令/01linux常用命令01.md" target="_blank" rel="noopener noreferrer">在GitHub 上编辑此页！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">1/25/2021, 3:01:25 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/linux/linux常用命令/02centos命令.html">
+        centos命令
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fdd7a502.js" defer></script><script src="/assets/js/16.375b747e.js" defer></script><script src="/assets/js/52.0c7cbfb1.js" defer></script>
+  </body>
+</html>

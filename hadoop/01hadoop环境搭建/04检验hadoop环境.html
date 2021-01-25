@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>检验hadoop环境 | 个人博客 | JiiiiG</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="自是年少，韶华倾负">
+    
+    <link rel="preload" href="/assets/css/0.styles.420b7c1f.css" as="style"><link rel="preload" href="/assets/js/app.fdd7a502.js" as="script"><link rel="preload" href="/assets/js/16.375b747e.js" as="script"><link rel="preload" href="/assets/js/51.a66bcd03.js" as="script"><link rel="prefetch" href="/assets/js/10.bbd38b9e.js"><link rel="prefetch" href="/assets/js/11.f49fc7d3.js"><link rel="prefetch" href="/assets/js/12.c5d97aa1.js"><link rel="prefetch" href="/assets/js/13.426d0224.js"><link rel="prefetch" href="/assets/js/14.1f257a58.js"><link rel="prefetch" href="/assets/js/15.be29bb6a.js"><link rel="prefetch" href="/assets/js/17.d02cdd8b.js"><link rel="prefetch" href="/assets/js/18.5d2371a4.js"><link rel="prefetch" href="/assets/js/19.038919a3.js"><link rel="prefetch" href="/assets/js/2.d6257727.js"><link rel="prefetch" href="/assets/js/20.b3582e09.js"><link rel="prefetch" href="/assets/js/21.0c1e826b.js"><link rel="prefetch" href="/assets/js/22.91bff1a5.js"><link rel="prefetch" href="/assets/js/23.faacea60.js"><link rel="prefetch" href="/assets/js/24.69816497.js"><link rel="prefetch" href="/assets/js/25.c9fcaa62.js"><link rel="prefetch" href="/assets/js/26.d28c3abe.js"><link rel="prefetch" href="/assets/js/27.1518da7d.js"><link rel="prefetch" href="/assets/js/28.748a5581.js"><link rel="prefetch" href="/assets/js/29.775019f1.js"><link rel="prefetch" href="/assets/js/3.141002a4.js"><link rel="prefetch" href="/assets/js/30.74e7c570.js"><link rel="prefetch" href="/assets/js/31.190b11f2.js"><link rel="prefetch" href="/assets/js/32.d8f4f116.js"><link rel="prefetch" href="/assets/js/33.c489bc81.js"><link rel="prefetch" href="/assets/js/34.db609d51.js"><link rel="prefetch" href="/assets/js/35.ad3402e6.js"><link rel="prefetch" href="/assets/js/36.45f11923.js"><link rel="prefetch" href="/assets/js/37.b47e0576.js"><link rel="prefetch" href="/assets/js/38.58b934a2.js"><link rel="prefetch" href="/assets/js/39.e4d6bcdf.js"><link rel="prefetch" href="/assets/js/4.e9b44388.js"><link rel="prefetch" href="/assets/js/40.555106bc.js"><link rel="prefetch" href="/assets/js/41.4387ceb1.js"><link rel="prefetch" href="/assets/js/42.9bd4aea0.js"><link rel="prefetch" href="/assets/js/43.587e7966.js"><link rel="prefetch" href="/assets/js/44.80285763.js"><link rel="prefetch" href="/assets/js/45.f978da77.js"><link rel="prefetch" href="/assets/js/46.d93e3f2e.js"><link rel="prefetch" href="/assets/js/47.c15bd2aa.js"><link rel="prefetch" href="/assets/js/48.cb55fa72.js"><link rel="prefetch" href="/assets/js/49.d0f4e454.js"><link rel="prefetch" href="/assets/js/5.b90b80cb.js"><link rel="prefetch" href="/assets/js/50.112e8260.js"><link rel="prefetch" href="/assets/js/52.0c7cbfb1.js"><link rel="prefetch" href="/assets/js/53.67ef240b.js"><link rel="prefetch" href="/assets/js/54.2c2d082d.js"><link rel="prefetch" href="/assets/js/55.88f19a20.js"><link rel="prefetch" href="/assets/js/56.c726e920.js"><link rel="prefetch" href="/assets/js/57.eaee47c5.js"><link rel="prefetch" href="/assets/js/58.ac15a3ac.js"><link rel="prefetch" href="/assets/js/59.64bdc849.js"><link rel="prefetch" href="/assets/js/6.7eea74ff.js"><link rel="prefetch" href="/assets/js/7.a1370e98.js"><link rel="prefetch" href="/assets/js/8.2e898240.js"><link rel="prefetch" href="/assets/js/9.a2439994.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.420b7c1f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客 | JiiiiG</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/linux/linux常用命令/01linux常用命令01.html" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="nav-link">
+  hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/hbase/hbase.html" class="nav-link">
+  hbase
+</a></li><li class="dropdown-item"><!----> <a href="/flink/flink.html" class="nav-link">
+  flink
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/hadoop/01hadoop%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/.html" class="nav-link">
+  java
+</a></li></ul></div></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>hadoop环境搭建</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/hadoop/01hadoop环境搭建/01搭建hadoop集群.html" class="sidebar-link">hadoop环境集群</a></li><li><a href="/hadoop/01hadoop环境搭建/02启动hadoop集群.html" class="sidebar-link">启动hadoop集群</a></li><li><a href="/hadoop/01hadoop环境搭建/03搭建zoopkeeper集群.html" class="sidebar-link">搭建zookeeper集群</a></li><li><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html" class="active sidebar-link">检验hadoop环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#单词统计实例" class="sidebar-link">单词统计实例</a></li><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#创建快捷脚本" class="sidebar-link">创建快捷脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#xcall" class="sidebar-link">xcall</a></li><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#xsync" class="sidebar-link">xsync</a></li><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#hadoop-sh" class="sidebar-link">hadoop.sh</a></li><li class="sidebar-sub-header"><a href="/hadoop/01hadoop环境搭建/04检验hadoop环境.html#zkhadoop-sh" class="sidebar-link">zkhadoop.sh</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>hadoop初步认识</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HDFS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MAPREDUCE</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="单词统计实例"><a href="#单词统计实例" class="header-anchor">#</a> 单词统计实例</h2> <p>到目前为止，hadoop所有的环境都搭建完成了，现在来看个hadoop运行实例（单词统计）。在主节点node01上操作：</p> <p>1、在hdfs上创建一个目录，并在本地文件系统创建一个words文件（随便写几个单词）</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hdfs dfs -mkdir /test
+hdfs dfs -ls /test
+<span class="token function">touch</span> /home/hadoop/words
+<span class="token builtin class-name">cd</span>
+<span class="token function">vi</span> words 
+<span class="token function">cat</span> words
+</code></pre></div><p>2、把words文件推送到hdfs上：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hdfs dfs -put /home/hadoop/words /test
+hdfs dfs -ls -r /test
+</code></pre></div><p>3、执行示例：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hadoop jar /kkb/install/hadoop-2.6.0-cdh5.14.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0-cdh5.14.2.jar wordcount /test/words /test/output
+</code></pre></div><p>4、查看结果输出文件：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>hdfs dfs -text /test/output/part-r-00000
+hdfs dfs -ls /test/output/
+</code></pre></div><p>5、从web页面下载part-r-00000</p> <p>配置windows的hosts文件，用管理员身份修改<code>windows</code>的文件<code>C:/windows/system32/drivers/etc/hosts</code></p> <p>添加下列内容：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token number">192.168</span>.52.101 node01
+<span class="token number">192.168</span>.52.102 node02
+<span class="token number">192.168</span>.52.103 node03
+</code></pre></div><p>使用浏览器访问<code>node01:50070</code>，进到文件系统页面找到文件下载即可</p> <h2 id="创建快捷脚本"><a href="#创建快捷脚本" class="header-anchor">#</a> 创建快捷脚本</h2> <h3 id="xcall"><a href="#xcall" class="header-anchor">#</a> xcall</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>所有节点创建<strong>快速在所有节点执行命令</strong>的脚本<code>xcall</code></p></div> <p>在node01执行：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">su</span> - hadoop
+<span class="token function">mkdir</span> ~/bin  
+<span class="token function">vi</span> ~/bin/xcall
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">params</span><span class="token operator">=</span><span class="token variable">$@</span>
+<span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token number">201</span>
+<span class="token keyword">for</span> <span class="token variable"><span class="token punctuation">((</span> i<span class="token operator">=</span><span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">3</span> <span class="token punctuation">;</span> i <span class="token operator">=</span> $i <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">))</span></span> <span class="token punctuation">;</span> <span class="token keyword">do</span>
+    <span class="token builtin class-name">echo</span> <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span> node0<span class="token variable">$i</span> <span class="token variable">$params</span> <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+    <span class="token function">ssh</span> node0<span class="token variable">$i</span> <span class="token string">&quot;source /etc/profile;<span class="token variable">$params</span>&quot;</span>
+<span class="token keyword">done</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> ~/bin
+<span class="token function">chmod</span> <span class="token number">777</span> xcall
+<span class="token function">scp</span> xcall node02:<span class="token environment constant">$PWD</span>/    <span class="token comment">#node02要创建一个bin目录</span>
+<span class="token function">scp</span> xcall node03:<span class="token environment constant">$PWD</span>/    <span class="token comment">#node03要创建一个bin目录</span>
+</code></pre></div><p>所有机器为<code>~/bin</code>目录添加环境变量：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> /home/hadoop/.bash_profile
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">MY_HOME</span><span class="token operator">=</span>/home/hadoop/
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$HOME</span>/bin:<span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$HADOOP_HOME</span>/bin:<span class="token variable">$HADOOP_HOME</span>/sbin:<span class="token variable">$ZOOKEEPER_HOME</span>/bin:<span class="token variable">$MY_HOME</span>/bin
+</code></pre></div><p>查看效果：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>hadoop@node01 bin<span class="token punctuation">]</span>$ xcall jps
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span> node01 jps <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token number">27395</span> DataNode
+<span class="token number">27270</span> NameNode
+<span class="token number">27799</span> NodeManager
+<span class="token number">27544</span> SecondaryNameNode
+<span class="token number">29195</span> QuorumPeerMain
+<span class="token number">28172</span> JobHistoryServer
+<span class="token number">27679</span> ResourceManager
+<span class="token number">29599</span> Jps
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span> node02 jps <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token number">17698</span> NodeManager
+<span class="token number">19155</span> Jps
+<span class="token number">18908</span> QuorumPeerMain
+<span class="token number">17598</span> DataNode
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span> node03 jps <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token number">19376</span> Jps
+<span class="token number">17686</span> DataNode
+<span class="token number">19128</span> QuorumPeerMain
+<span class="token number">17786</span> NodeManager
+</code></pre></div><h3 id="xsync"><a href="#xsync" class="header-anchor">#</a> xsync</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在主节点<code>node01</code>上创建<code>xsync</code>脚本文件，方便快速同步所有机器的文件。</p> <p>xsync脚本里面用到了rsync命令，rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。rsync使用所谓的“rsync算法”来使本地和远程两个主机之间的文件达到同步，这个算法<strong>只传送两个文件的不同部分</strong>，而不是每次都整份传送，因此速度相当快。</p> <p><a href="https://man.linuxde.net/rsync" target="_blank" rel="noopener noreferrer">查看rsync命令更多信息<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p></div> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> ~/bin/xsync
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#1 获取输入参数个数，如果没有参数，直接退出</span>
+<span class="token assign-left variable">pcount</span><span class="token operator">=</span><span class="token variable">$#</span>
+<span class="token keyword">if</span> <span class="token variable"><span class="token punctuation">((</span>pcount<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+<span class="token builtin class-name">echo</span> no args<span class="token punctuation">;</span>
+<span class="token builtin class-name">exit</span><span class="token punctuation">;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment">#2 获取文件名称</span>
+<span class="token assign-left variable">p1</span><span class="token operator">=</span><span class="token variable">$1</span>
+<span class="token assign-left variable">fname</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">basename</span> $p1<span class="token variable">`</span></span>
+
+<span class="token builtin class-name">echo</span> <span class="token variable">$fname</span>
+
+<span class="token comment">#3 获取上级目录到绝对路径</span>
+<span class="token assign-left variable">pdir</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">cd</span> -P <span class="token punctuation">$(</span>dirname $p1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$pdir</span>
+
+<span class="token comment">#4 获取当前用户名称</span>
+<span class="token assign-left variable">user</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">whoami</span><span class="token variable">`</span></span>
+
+<span class="token comment">#5 循环</span>
+<span class="token keyword">for</span><span class="token variable"><span class="token punctuation">((</span>host<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> host<span class="token operator">&lt;</span><span class="token number">4</span><span class="token punctuation">;</span> host<span class="token operator">++</span><span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+        <span class="token builtin class-name">echo</span> ------------------- node0<span class="token variable">$host</span> --------------
+        <span class="token function">rsync</span> -av <span class="token variable">$pdir</span>/<span class="token variable">$fname</span> <span class="token variable">$user</span>@node0<span class="token variable">$host</span><span class="token builtin class-name">:</span><span class="token variable">$pdir</span>
+<span class="token keyword">done</span>
+
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>chmod 777 ~/bin/xsync
+</code></pre></div><h3 id="hadoop-sh"><a href="#hadoop-sh" class="header-anchor">#</a> hadoop.sh</h3> <p>创建<strong>快速启动和停止hadoop</strong>的脚本：hadoop.sh</p> <p>主节点node01执行以下操作：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> hadoop.sh
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword">case</span> <span class="token variable">$1</span> <span class="token keyword">in</span>
+<span class="token string">&quot;start&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span> /home/hadoop/.bash_profile<span class="token punctuation">;</span>
+ /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/start-dfs.sh
+ /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/start-yarn.sh
+ /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/mr-jobhistory-daemon.sh start historyserver
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token string">&quot;stop&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/stop-dfs.sh
+ /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/stop-yarn.sh
+ /kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/mr-jobhistory-daemon.sh stop  historyserver
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> <span class="token number">777</span> ~/bin/hadoop.sh
+</code></pre></div><p>验证效果：</p> <div class="language- extra-class"><pre class="language-text"><code>hadoop.sh start
+hadoop.sh stop
+</code></pre></div><h3 id="zkhadoop-sh"><a href="#zkhadoop-sh" class="header-anchor">#</a> zkhadoop.sh</h3> <p>主节点node01创建快速启动zookeeper集群和hadoop集群的脚本：zkhadoop.sh：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vi</span> ~/bin/zkhadoop.sh
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">source</span> /etc/profile
+/kkb/install/zookeeper-3.4.5-cdh5.14.2/bin/zkServer.sh start
+
+<span class="token function">sleep</span> <span class="token number">5</span>
+
+<span class="token function">ssh</span> node02 <span class="token string">&quot;source /etc/profile;/kkb/install/zookeeper-3.4.5-cdh5.14.2/bin/zkServer.sh start&quot;</span>
+
+<span class="token function">sleep</span> <span class="token number">5</span>
+
+<span class="token function">ssh</span> node03 <span class="token string">&quot;source /etc/profile;/kkb/install/zookeeper-3.4.5-cdh5.14.2/bin/zkServer.sh start&quot;</span>
+
+<span class="token function">sleep</span> <span class="token number">5</span>
+
+<span class="token function">ssh</span> node01 <span class="token string">&quot;/kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/start-dfs.sh;/kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/start-yarn.sh&quot;</span>
+
+<span class="token function">sleep</span> <span class="token number">3</span>
+
+/kkb/install/hadoop-2.6.0-cdh5.14.2/sbin/mr-jobhistory-daemon.sh start historyserver
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> <span class="token number">777</span> ~/bin/zkhadoop.sh
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>zkhadoop.sh
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/MaLunan/press/edit/dev-mln/docs/hadoop/01hadoop环境搭建/04检验hadoop环境.md" target="_blank" rel="noopener noreferrer">在GitHub 上编辑此页！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">1/25/2021, 3:01:25 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/hadoop/01hadoop环境搭建/03搭建zoopkeeper集群.html" class="prev">
+        搭建zookeeper集群
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fdd7a502.js" defer></script><script src="/assets/js/16.375b747e.js" defer></script><script src="/assets/js/51.a66bcd03.js" defer></script>
+  </body>
+</html>
